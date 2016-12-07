@@ -24,3 +24,21 @@ select {
   background:#fff;
   box-shadow: none;
 }
+
+.single-date-picker {
+  width: 90px;
+  text-align: center;
+  margin-right: 0;
+}
+
+.form-group {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+p.form-control {
+  background-color: $grey-1;
+  color: $grey-6;
+  border-color: transparent;
+  box-shadow: none;
+}

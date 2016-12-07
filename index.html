@@ -16,8 +16,8 @@ layout: default
 
             <ul class="nav nav-tabs">
                 <li role="presentation" class="active"><a href="{{ "/" | prepend: site.baseurl }}"><span class="icon-list-plain"></span> All plans</a></li>
-                <li role="presentation" class=""><a href="{{ "/route-summary" | prepend: site.baseurl }}"><span class="icon-report"></span> Day summary</a></li>
-                <li role="presentation" class=""><a href="{{ "/route-map" | prepend: site.baseurl }}"><span class="icon-map-poi"></span> Map</a></li>
+                <li role="presentation" class=""><a href="{{ "/route-summary-empty" | prepend: site.baseurl }}"><span class="icon-report"></span> Day summary</a></li>
+                <li role="presentation" class=""><a href="{{ "/route-map-empty" | prepend: site.baseurl }}"><span class="icon-map-poi"></span> Map</a></li>
             </ul>
 
         </div>
@@ -51,7 +51,7 @@ layout: default
                 </div>
                 <div class="col-xs-6 page-actions">
                     <a id="clear-selected">Clear all <strong>6</strong> selected plans</a>
-                    <a href="{{ "/route-create" | prepend: site.baseurl }}" class="btn btn-green"><span class="icon-plus"></span> Create new plan</a>
+                    <a href="{{ "/route-create" | prepend: site.baseurl }}" class="btn btn-green"><span class="icon-plus"></span> Create new draft plan</a>
                     <button class="btn btn-green"><span class="icon-compare"></span> Compare</button>
                     <button class="btn btn-blue"><span class="icon-refresh"></span> Refresh list</button>
                 </div>

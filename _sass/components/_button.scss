@@ -45,9 +45,18 @@
 }
 
 .btn-black {
-  background-color: $brand-black;
+  background-color: darken($brand-black, 5%);
   border-bottom-color: darken($brand-black, 15%);
   &:hover {
     background-color: darken($brand-black, 15%);
   }
+}
+
+input + .date-changer {
+  margin-left: 0 !important;
+}
+
+.date-changer {
+  padding-left: 5px;
+  padding-right: 5px;
 }

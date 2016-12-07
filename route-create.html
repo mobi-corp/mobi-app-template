@@ -3,7 +3,7 @@ layout: default
 path: /route-summary
 ---
 
-<div class="app-route summary-page">
+<div class="app-route create">
 
     <!-- HEADER -->
 
@@ -17,7 +17,7 @@ path: /route-summary
             </div>
 
             <ul class="nav nav-tabs">
-                <li role="presentation" class=""><a href="{{ "/" | prepend: site.baseurl }}"><span class="icon-list-plain"></span> All plans</a></li>
+                <li role="presentation" class="active"><a href="{{ "/" | prepend: site.baseurl }}"><span class="icon-list-plain"></span> All plans</a></li>
                 <li role="presentation" class=""><a href="{{ "/route-summary" | prepend: site.baseurl }}"><span class="icon-report"></span> Day summary</a></li>
                 <li role="presentation" class=""><a href="{{ "/route-map" | prepend: site.baseurl }}"><span class="icon-map-poi"></span> Map</a></li>
             </ul>
@@ -52,9 +52,7 @@ path: /route-summary
                         <li><span>> <a>Create plan</a></span></li>
                     </ul>
                 </div>
-                <div class="col-xs-6 page-actions">
-                    <a href="{{ "/" | prepend: site.baseurl }}" class="btn btn-blue"><span class="icon-back"></span> Back to plan list</a>
-                </div>
+                <div class="col-xs-6 page-actions"></div>
             </div>
 
         </div>
@@ -89,142 +87,128 @@ path: /route-summary
         <div class="row title-row">
             <div class="col-xs-5" class="section-title">
                 <h3 role="button" data-toggle="collapse" data-target="#plan-create-collapse" aria-expanded="false" aria-controls="plan-create-collapse">
-                    Plan summary
+                    Create new draft plan(s)
                 </h3>
             </div>
             <div class="col-xs-7 section-actions">
-
+                <a href="{{ "/" | prepend: site.baseurl }}" class="btn btn-green"><span class="icon-check"></span> Create draft plan(s)</a>
+                <a href="{{ "/" | prepend: site.baseurl }}" class="btn btn-black"><span class="icon-invalid"></span> Cancel</a>
             </div>
         </div>
         <div class="row content-row collapse in" id="plan-create-collapse">
-            <div class="col-xs-12">
-                X
-            </div>
+            <form>
+                <div class="row">
+                    <div class="col-xs-2">
+                        <label>Branch</label>
+                        <p class="form-control">Austin - AUS</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <label for="plan-name">Plan name</label>
+                        <input type="text" id="plan-name" class="form-control" placeholder="">
+                    </div>
+                    <div class="col-xs-3 date">
+                        <label for="plan-date">Plan date</label>
+                        <div>
+                            <button class="btn btn-blue"><span class="icon-arrow-left"></span></button>
+                            <input type="text" id="plan-date" class="form-control" value="08/22/16">
+                            <button class="btn btn-blue"><span class="icon-arrow-right"></span></button>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <label for="options">Options</label>
+                        <select id="options" class="form-control">
+                            <option>Generate optimized plan</option>
+                            <option>Generate unoptimized plan using historical data</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4 op-1">
+                        <div class="wrapper">
+
+                            <div class="form-group">
+                                <label for="op-1">Optimization profile</label>
+                                <select class="form-control" id="op-1">
+                                    <option>DEFAULT - Daily Planning Profile</option>
+                                    <option>CALTEST - Daily Planning Profile</option>
+                                    <option>DEFAULT - Daily Planning Profile for AA Time Range</option>
+                                    <option>Demo 2 DEFAULT - Daily Planning Profile</option>
+                                    <option>MOBI-MON-ONLY</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tech-op-1">Tech Optimization profile</label>
+                                <select class="form-control" id="tech-op-1">
+                                    <option>Duplicate of STANDARD UBE 2</option>
+                                    <option>Auditor</option>
+                                    <option>Commercial Technician</option>
+                                    <option>Construction Technician</option>
+                                    <option>Disconnect Tech</option>
+                                    <option>Disconnect Tech - AC</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xs-4 op-2 unselected">
+                        <div class="wrapper">
+
+                            <a id="add-op-2">Add second profile</a>
+                            <div class="form-group">
+                                <label for="op-2">Optimization profile 2</label>
+                                <select class="form-control" id="op-2">
+                                    <option>DEFAULT - Daily Planning Profile</option>
+                                    <option>CALTEST - Daily Planning Profile</option>
+                                    <option>DEFAULT - Daily Planning Profile for AA Time Range</option>
+                                    <option>Demo 2 DEFAULT - Daily Planning Profile</option>
+                                    <option>MOBI-MON-ONLY</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tech-op-2">Tech Optimization profile 2</label>
+                                <select class="form-control" id="tech-op-2">
+                                    <option>Duplicate of STANDARD UBE 2</option>
+                                    <option>Auditor</option>
+                                    <option>Commercial Technician</option>
+                                    <option>Construction Technician</option>
+                                    <option>Disconnect Tech</option>
+                                    <option>Disconnect Tech - AC</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xs-4 op-3 unselected">
+                        <div class="wrapper">
+
+                            <a id="add-op-3">Add third profile</a>
+                            <div class="form-group">
+                                <label for="op-3">Optimization profile 3</label>
+                                <select class="form-control" id="op-3">
+                                    <option>DEFAULT - Daily Planning Profile</option>
+                                    <option>CALTEST - Daily Planning Profile</option>
+                                    <option>DEFAULT - Daily Planning Profile for AA Time Range</option>
+                                    <option>Demo 2 DEFAULT - Daily Planning Profile</option>
+                                    <option>MOBI-MON-ONLY</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="tech-op-3">Tech Optimization profile 3</label>
+                                <select class="form-control" id="tech-op-3">
+                                    <option>Duplicate of STANDARD UBE 2</option>
+                                    <option>Auditor</option>
+                                    <option>Commercial Technician</option>
+                                    <option>Construction Technician</option>
+                                    <option>Disconnect Tech</option>
+                                    <option>Disconnect Tech - AC</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
-        <!--<div class="row content-row">-->
-            <!--<div class="col-xs-4">-->
-                <!--<div class="summary-box-container top">-->
-                    <!--<table>-->
-                        <!--<tr>-->
-                            <!--<td>-->
-                                <!--<p class="small-value">$721,426.16</p>-->
-                                <!--<p class="value">188</p>-->
-                                <!--<p class="label">Assigned</p>-->
-                            <!--</td>-->
-                            <!--<td class="plus">-->
-                                <!--<p class="small-value">$23,024.24</p>-->
-                                <!--<p class="value">6</p>-->
-                                <!--<p class="label">Unassigned</p>-->
-                            <!--</td>-->
-                            <!--<td class="equal">-->
-                                <!--<p class="small-value">$744,450.40</p>-->
-                                <!--<p class="value">194</p>-->
-                                <!--<p class="label">Total</p>-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                    <!--</table>-->
-                    <!--<div class="linechart">-->
-                        <!--<div class="assigned" style="width: 97%;"></div>-->
-                        <!--<div class="unassigned" style="width: 3%;"></div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="summary-box-container bottom unassigned-jobs">-->
-                    <!--<div class="row">-->
-                        <!--<div class="col-xs-8">-->
-                            <!--<p>Unassigned jobs</p>-->
-                        <!--</div>-->
-                        <!--<div class="col-xs-4"><a>Export data</a></div>-->
-                    <!--</div>-->
-                    <!--<div class="row">-->
-                        <!--<div class="col-xs-8 description">-->
-                            <!--<p>Preferred resource is full: Preferred resource is full</p>-->
-                            <!--<p>Preferred resource is full: Preferred resource is full</p>-->
-                        <!--</div>-->
-                        <!--<div class="col-xs-4 count">-->
-                            <!--<p>10</p>-->
-                            <!--<p>2</p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="col-xs-8">-->
-                <!--<div class="summary-box-container top">-->
-                    <!--<table>-->
-                        <!--<tr>-->
-                            <!--<td class="onsite">-->
-                                <!--<p class="small-value">32m</p>-->
-                                <!--<p class="value">67.8h</p>-->
-                                <!--<p class="label">Onsite</p>-->
-                            <!--</td>-->
-                            <!--<td class="travel plus">-->
-                                <!--<p class="small-value">6m</p>-->
-                                <!--<p class="value">12.6h</p>-->
-                                <!--<p class="label">Travel</p>-->
-                            <!--</td>-->
-                            <!--<td class="commute plus">-->
-                                <!--<p class="small-value">32m</p>-->
-                                <!--<p class="value">67.7h</p>-->
-                                <!--<p class="label">Commute</p>-->
-                            <!--</td>-->
-                            <!--<td class="break plus">-->
-                                <!--<p class="small-value">0m</p>-->
-                                <!--<p class="value">1.0h</p>-->
-                                <!--<p class="label">Break</p>-->
-                            <!--</td>-->
-                            <!--<td class="available plus">-->
-                                <!--<p class="small-value">35m</p>-->
-                                <!--<p class="value">74.1h</p>-->
-                                <!--<p class="label">Available</p>-->
-                            <!--</td>-->
-                            <!--<td class="equal">-->
-                                <!--<p class="small-value">105m</p>-->
-                                <!--<p class="value">223.1h</p>-->
-                                <!--<p class="label">Total time</p>-->
-                            <!--</td>-->
-                            <!--<td class="overtime">-->
-                                <!--<p class="small-value">26m</p>-->
-                                <!--<p class="value">55.1h</p>-->
-                                <!--<p class="label">Overtime</p>-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                    <!--</table>-->
-                    <!--<div class="linechart">-->
-                        <!--<div class="onsite" style="width: 30%;"></div>-->
-                        <!--<div class="travel" style="width: 6%;"></div>-->
-                        <!--<div class="commute" style="width: 30%;"></div>-->
-                        <!--<div class="break" style="width: 2%;"></div>-->
-                        <!--<div class="available" style="width: 32%;"></div>-->
-                        <!--<div class="overtime" style="width: 10%;"></div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="summary-box-container bottom summary-nav">-->
-                    <!--<table>-->
-                        <!--<tr>-->
-                            <!--<td>-->
-                                <!--<p class="value">94.1%</p>-->
-                                <!--<p class="label">On-time arrivals</p>-->
-                            <!--</td>-->
-                            <!--<td>-->
-                                <!--<p class="value">$156,431.54</p>-->
-                                <!--<p class="label">Cost</p>-->
-                            <!--</td>-->
-                            <!--<td class="active">-->
-                                <!--<p class="value">223.1h</p>-->
-                                <!--<p class="label">Time</p>-->
-                            <!--</td>-->
-                            <!--<td>-->
-                                <!--<p class="value">14</p>-->
-                                <!--<p class="label">Resources</p>-->
-                            <!--</td>-->
-                            <!--<td>-->
-                                <!--<p class="value">41,197.1 mi</p>-->
-                                <!--<p class="label">Distance</p>-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                    <!--</table>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
     </section>
 
     <!-- END CONTENT -->

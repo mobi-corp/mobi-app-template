@@ -509,4 +509,39 @@
     }
   }
 
+  .empty .summary {
+    background-color: transparent;
+    text-align: center;
+    color: $grey-6;
+    padding: 30px;
+  }
+
+  &.create {
+    form {
+      margin: 15px;
+      .date {
+        input {
+          display: inline-block;
+          width: auto;
+        }
+      }
+      [class*="op-"] {
+        .wrapper {
+          background-color: $grey-1;
+          padding: 5px 15px;
+        }
+        &.unselected {
+          a {
+            margin: 15px auto;
+            display: block;
+            text-align: center;
+          }
+          .form-group {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
 }
