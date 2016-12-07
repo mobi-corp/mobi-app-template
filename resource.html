@@ -11,20 +11,20 @@ path: /resource
         <div class="top-level">
 
             <div class="logo-block">
-                <img src="/images/mobi-resource-logo.png">
+                <img src="{{ "/images/mobi-resource-logo.png" | prepend: site.baseurl }}">
                 <a class="arrow"></a>
             </div>
 
             <ul class="nav nav-tabs">
-                <li role="presentation" class="active"><a href="/resource"><span class="icon-grid"></span> Summary</a></li>
-                <li role="presentation"><a href="#"><span class="icon-building"></span> Organization</a></li>
-                <li role="presentation"><a href="/resource-drivers"><span class="icon-person"></span> Drivers</a></li>
-                <li role="presentation"><a href="#"><span class="icon-vehicle"></span> Vehicles</a></li>
-                <li role="presentation"><a href="#"><span class="icon-gps"></span> Devices</a></li>
-                <li role="presentation"><a href="#"><span class="icon-poi"></span> POIs</a></li>
-                <li role="presentation"><a href="#"><span class="icon-group"></span> Users</a></li>
-                <li role="presentation"><a href="#"><span class="icon-report"></span> Reports</a></li>
-                <li role="presentation"><a href="#"><span class="icon-tools"></span> Service types</a></li>
+                <li role="presentation" class="active"><a href="{{ "/resource" | prepend: site.baseurl }}"><span class="icon-grid"></span> Summary</a></li>
+                <li role="presentation"><a><span class="icon-building"></span> Organization</a></li>
+                <li role="presentation"><a href="{{ "/resource-drivers" | prepend: site.baseurl }}"><span class="icon-person"></span> Drivers</a></li>
+                <li role="presentation"><a><span class="icon-vehicle"></span> Vehicles</a></li>
+                <li role="presentation"><a><span class="icon-gps"></span> Devices</a></li>
+                <li role="presentation"><a><span class="icon-poi"></span> POIs</a></li>
+                <li role="presentation"><a><span class="icon-group"></span> Users</a></li>
+                <li role="presentation"><a><span class="icon-report"></span> Reports</a></li>
+                <li role="presentation"><a><span class="icon-tools"></span> Service types</a></li>
             </ul>
 
         </div>
@@ -37,7 +37,7 @@ path: /resource
                 <li class="current"><a><span class="icon-app-resource"></span> Resource</a></li>
                 <li class="disabled"><a><span class="icon-app-appointment"></span> Appointment</a></li>
                 <li class=""><a><span class="icon-app-dispatch"></span> Dispatch</a></li>
-                <li class=""><a href="/"><span class="icon-app-route"></span> Route</a></li>
+                <li class=""><a href="{{ "/" | prepend: site.baseurl }}""><span class="icon-app-route"></span> Route</a></li>
                 <li class=""><a><span class="icon-app-connect"></span> Connect</a></li>
                 <li class=""><a><span class="icon-app-locate"></span> Locate</a></li>
                 <li class=""><a><span class="icon-app-insight"></span> Insight</a></li>
