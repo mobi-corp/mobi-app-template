@@ -1,0 +1,25 @@
+.nav {
+  display: inline-block;
+  position: absolute;
+  right: 30px;
+  bottom: 1px;
+  border: none;
+  font-size: $small-font-size;
+  .active a, li a:hover, .active a:hover {
+    background-color: $brand-black !important;
+    color: white !important;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+  li a {
+    color: white;
+    border: none !important;
+    margin-right: 3px;
+    [class^="icon"] {
+      font-size: $base-font-size * 1.25;
+      position: relative;
+      top: 3px;
+      left: -2px;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color: $grey-2;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: $brand-black;
+}
+
+a {
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.app-resource {
+  background-color: $grey-8;
+  color: white;
+}
+
+
+// Content area
+
+body > section {
+  overflow-x: hidden;
+}
+
+
+// Content
+
+.title-row, .content-row {
+  width: 100%;
+  margin-left: 0;
+}
+
+.title-row {
+  height: 50px;
+  display: table;
+  table-layout: fixed;
+  [class^="col-"] {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  h3 {
+    display: inline-block;
+    margin: 15px;
+    &:before {
+      content: '–';
+    }
+    &.collapsed:before {
+      content: '+';
+      margin-left: -2px;
+    }
+  }
+  .section-tabs, .section-actions {
+    text-align: right;
+  }
+  .section-tabs {
+    vertical-align: bottom;
+    li a {
+      color: $brand-black;
+    }
+  }
+}
+
+
+.content-row {
+  background-color: $grey-0;
+}
+
+

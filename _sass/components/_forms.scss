@@ -1,0 +1,26 @@
+input, select {
+  padding: 4px 12px;
+  border-radius: 2px;
+  outline: none;
+  border: 2px solid transparent;
+  font-size: $small-font-size;
+  color: $brand-black;
+  &:focus {
+    border-color: $brand-green;
+  }
+}
+
+input[type="date"], input[type="number"] {
+  text-align: right;
+}
+
+.date-range {
+  width: 155px;
+}
+
+select {
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  background:#fff;
+  box-shadow: none;
+}

@@ -1,0 +1,54 @@
+table.list {
+  width: 100%;
+  table-layout: fixed;
+  th {
+    line-height: 1.25;
+    vertical-align: bottom;
+  }
+  th, td {
+    text-align: right;
+    padding: 5px;
+    &:first-child {
+      padding-left: 15px;
+    }
+  }
+  td {
+    color: $grey-9;
+    vertical-align: top;
+    border-bottom: 1px solid $grey-0;
+  }
+  .name, .status, .profile, .modified, .created {
+    text-align: left;
+  }
+  .name input {
+    margin-right: 5px;
+  }
+  tbody {
+    background-color: white;
+  }
+  .sub {
+    display: block;
+    font-style: italic;
+    color: $grey-6;
+  }
+  .expand-row:before {
+    font-weight: bold;
+    font-size: $base-font-size * 1.5;
+    content: '+';
+    display: inline-block;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  .expanded:before {
+    content: '–';
+  }
+}
+
+.pagination-row {
+  text-align: right;
+  padding: 10px 15px 5px;
+}

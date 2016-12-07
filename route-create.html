@@ -1,0 +1,232 @@
+---
+layout: default
+path: /route-summary
+---
+
+<div class="app-route summary-page">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="top-level">
+
+            <div class="logo-block">
+                <a href="/"><img src="/images/mobi-route-logo.png"></a>
+                <a class="arrow"></a>
+            </div>
+
+            <ul class="nav nav-tabs">
+                <li role="presentation" class=""><a href="/"><span class="icon-list-plain"></span> All plans</a></li>
+                <li role="presentation" class=""><a href="/route-summary"><span class="icon-report"></span> Day summary</a></li>
+                <li role="presentation" class=""><a href="/route-map"><span class="icon-map-poi"></span> Map</a></li>
+            </ul>
+
+        </div>
+
+        <div id="product-nav">
+            <ul>
+                <li><a><span class="icon-home"></span> Landing page</a></li>
+                <li class="disabled"><a><span class="icon-app-territory"></span> Territory</a></li>
+                <li class=""><a><span class="icon-app-plan"></span> Plan</a></li>
+                <li class=""><a href="/resource"><span class="icon-app-resource"></span> Resource</a></li>
+                <li class="disabled"><a><span class="icon-app-appointment"></span> Appointment</a></li>
+                <li class=""><a><span class="icon-app-dispatch"></span> Dispatch</a></li>
+                <li class="current"><a><span class="icon-app-route"></span> Route</a></li>
+                <li class=""><a><span class="icon-app-connect"></span> Connect</a></li>
+                <li class=""><a><span class="icon-app-locate"></span> Locate</a></li>
+                <li class=""><a><span class="icon-app-insight"></span> Insight</a></li>
+                <li class=""><a><span class="icon-app-result"></span> Result</a></li>
+            </ul>
+        </div>
+
+        <div class="bottom-level">
+
+            <div class="row">
+                <div class="col-xs-6 breadcrumbs">
+                    <span class="icon-tree-nav"></span>
+                    <ul>
+                        <li><span><a>Company</a></span></li>
+                        <li><span>> <a>Texas</a></span></li>
+                        <li><span>> <a href="/">Austin</a></span></li>
+                        <li><span>> <a>Create plan</a></span></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 page-actions">
+                    <a class="btn btn-blue"><span class="icon-back"></span> Back to plan list</a>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div id="tree-nav">
+        <ul>
+            <li class="open">
+                <a>Company</a>
+                <ul>
+                    <li class="open">
+                        <a>Texas</a>
+                        <ul>
+                            <li class="open end"><a>Austin</a></li>
+                            <li class="closed end"><a>Dallas</a></li>
+                            <li class="closed end"><a>Houston</a></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><a>California</a></li>
+                    <li class="closed"><a>Florida</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- END HEADER -->
+
+    <!-- CONTENT -->
+
+    <section class="plan-create">
+        <div class="row title-row">
+            <div class="col-xs-5" class="section-title">
+                <h3 role="button" data-toggle="collapse" data-target="#plan-create-collapse" aria-expanded="false" aria-controls="plan-create-collapse">
+                    Plan summary
+                </h3>
+            </div>
+            <div class="col-xs-7 section-actions">
+
+            </div>
+        </div>
+        <div class="row content-row collapse in" id="plan-create-collapse">
+            <div class="col-xs-12">
+                X
+            </div>
+        </div>
+        <!--<div class="row content-row">-->
+            <!--<div class="col-xs-4">-->
+                <!--<div class="summary-box-container top">-->
+                    <!--<table>-->
+                        <!--<tr>-->
+                            <!--<td>-->
+                                <!--<p class="small-value">$721,426.16</p>-->
+                                <!--<p class="value">188</p>-->
+                                <!--<p class="label">Assigned</p>-->
+                            <!--</td>-->
+                            <!--<td class="plus">-->
+                                <!--<p class="small-value">$23,024.24</p>-->
+                                <!--<p class="value">6</p>-->
+                                <!--<p class="label">Unassigned</p>-->
+                            <!--</td>-->
+                            <!--<td class="equal">-->
+                                <!--<p class="small-value">$744,450.40</p>-->
+                                <!--<p class="value">194</p>-->
+                                <!--<p class="label">Total</p>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                    <!--</table>-->
+                    <!--<div class="linechart">-->
+                        <!--<div class="assigned" style="width: 97%;"></div>-->
+                        <!--<div class="unassigned" style="width: 3%;"></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="summary-box-container bottom unassigned-jobs">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-xs-8">-->
+                            <!--<p>Unassigned jobs</p>-->
+                        <!--</div>-->
+                        <!--<div class="col-xs-4"><a>Export data</a></div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-xs-8 description">-->
+                            <!--<p>Preferred resource is full: Preferred resource is full</p>-->
+                            <!--<p>Preferred resource is full: Preferred resource is full</p>-->
+                        <!--</div>-->
+                        <!--<div class="col-xs-4 count">-->
+                            <!--<p>10</p>-->
+                            <!--<p>2</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-xs-8">-->
+                <!--<div class="summary-box-container top">-->
+                    <!--<table>-->
+                        <!--<tr>-->
+                            <!--<td class="onsite">-->
+                                <!--<p class="small-value">32m</p>-->
+                                <!--<p class="value">67.8h</p>-->
+                                <!--<p class="label">Onsite</p>-->
+                            <!--</td>-->
+                            <!--<td class="travel plus">-->
+                                <!--<p class="small-value">6m</p>-->
+                                <!--<p class="value">12.6h</p>-->
+                                <!--<p class="label">Travel</p>-->
+                            <!--</td>-->
+                            <!--<td class="commute plus">-->
+                                <!--<p class="small-value">32m</p>-->
+                                <!--<p class="value">67.7h</p>-->
+                                <!--<p class="label">Commute</p>-->
+                            <!--</td>-->
+                            <!--<td class="break plus">-->
+                                <!--<p class="small-value">0m</p>-->
+                                <!--<p class="value">1.0h</p>-->
+                                <!--<p class="label">Break</p>-->
+                            <!--</td>-->
+                            <!--<td class="available plus">-->
+                                <!--<p class="small-value">35m</p>-->
+                                <!--<p class="value">74.1h</p>-->
+                                <!--<p class="label">Available</p>-->
+                            <!--</td>-->
+                            <!--<td class="equal">-->
+                                <!--<p class="small-value">105m</p>-->
+                                <!--<p class="value">223.1h</p>-->
+                                <!--<p class="label">Total time</p>-->
+                            <!--</td>-->
+                            <!--<td class="overtime">-->
+                                <!--<p class="small-value">26m</p>-->
+                                <!--<p class="value">55.1h</p>-->
+                                <!--<p class="label">Overtime</p>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                    <!--</table>-->
+                    <!--<div class="linechart">-->
+                        <!--<div class="onsite" style="width: 30%;"></div>-->
+                        <!--<div class="travel" style="width: 6%;"></div>-->
+                        <!--<div class="commute" style="width: 30%;"></div>-->
+                        <!--<div class="break" style="width: 2%;"></div>-->
+                        <!--<div class="available" style="width: 32%;"></div>-->
+                        <!--<div class="overtime" style="width: 10%;"></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="summary-box-container bottom summary-nav">-->
+                    <!--<table>-->
+                        <!--<tr>-->
+                            <!--<td>-->
+                                <!--<p class="value">94.1%</p>-->
+                                <!--<p class="label">On-time arrivals</p>-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--<p class="value">$156,431.54</p>-->
+                                <!--<p class="label">Cost</p>-->
+                            <!--</td>-->
+                            <!--<td class="active">-->
+                                <!--<p class="value">223.1h</p>-->
+                                <!--<p class="label">Time</p>-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--<p class="value">14</p>-->
+                                <!--<p class="label">Resources</p>-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--<p class="value">41,197.1 mi</p>-->
+                                <!--<p class="label">Distance</p>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                    <!--</table>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </section>
+
+    <!-- END CONTENT -->
+
+</div>

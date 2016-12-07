@@ -1,0 +1,21 @@
+<footer>
+
+  Footer
+
+</footer>
+
+<!-- Jquery (not the latest version) -->
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+<!-- Bootstrap-sass JS -->
+<script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+
+<!-- Custom JS -->
+<script src="/js/helpers.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('.schedule-board .wrapper div').popover();
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>

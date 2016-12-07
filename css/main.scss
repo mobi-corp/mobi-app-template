@@ -1,0 +1,98 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@mixin clearfix {
+    &:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+// Our variables
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  14px;
+
+// Colors
+$brand-green: #799442;
+$brand-blue:  #4385ae;
+$brand-black: #333333;
+
+$customer-color: #8dc63f;
+
+$tier-1: #bcc857;
+$tier-2: #ccb049;
+$tier-3: #df8837;
+$tier-4: #f15827;
+
+$onsite-color: #99c5e0;
+$travel-color: #6fa8cf;
+$commute-color: #2b74a9;
+$break-color: #0c4874;
+$available-color: #22b573;
+$overtime-color: #f15a29;
+
+$grey-0: #f1f2f2;
+$grey-1: #e6e7e8;
+$grey-2: #dcdcdc;
+$grey-3: #bcbec0;
+$grey-4: #a7a9ac;
+$grey-5: #939598;
+$grey-5: #939598;
+$grey-6: #808285;
+$grey-7: #6d6e71;
+$grey-8: #595557;
+$grey-9: #414042;
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "utilities/fonts";
+
+@import "components/button",
+        "components/forms",
+        "components/tables",
+        "components/nav-tabs",
+        "components/schedule-boards",
+        "components/linecharts",
+        "components/filters",
+        "components/header";
+
+@import "products/route",
+        "products/resource";
+
+@import "layout";

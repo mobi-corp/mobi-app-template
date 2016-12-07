@@ -1,0 +1,46 @@
+.app-resource {
+
+  height: 100vh;
+  //padding: 30px;
+
+  .panels {
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+    .panel-container {
+      display: table-cell;
+      vertical-align: middle;
+      float: none;
+    }
+  }
+
+  .panel-box {
+    background-color: rgba($grey-7, 0.3);
+    padding: 15px;
+    margin: 10px 0;
+    height: 100%;
+    &:hover {
+      cursor: pointer;
+      background-color: $grey-7;
+      .icon {
+        color: white;
+      }
+    }
+    table {
+      table-layout: fixed;
+      width: 100%;
+    }
+    .icon {
+      text-align: center;
+      font-size: 80px;
+      line-height: 1;
+      color: $grey-5;
+    }
+    h2 span {
+      font-size: $base-font-size;
+      font-weight: 300;
+      line-height: 2;
+    }
+  }
+
+}

@@ -1,0 +1,109 @@
+.schedule-board {
+  .wrapper {
+    height: 24px;
+  }
+
+  div {
+    position: relative;
+  }
+
+  .available, .shift, .overtime {
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+  .shift {
+    background-color: $grey-2;
+  }
+  .available {
+    background-color: #84c4ec;
+  }
+  .overtime {
+    background-color: rgba($overtime-color, 0.5);
+  }
+
+  .travel, .wait {
+    height: 4px;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+  }
+  .travel {
+    background-color: $brand-black;
+  }
+  .wait {
+    background-color: darkgoldenrod;
+  }
+
+  .job, .break {
+    height: 14px;
+    position: absolute;
+    top: 5px;
+    z-index: 3;
+    border: 2px solid transparent;
+  }
+  .job {
+    background-color: $customer-color;
+    border-color: darken($customer-color, 15%);
+  }
+  .break {
+    background-color: $grey-5;
+    border-color: $grey-7;
+  }
+  .tier-1 {
+    background-color: $tier-1;
+    border-color: darken($tier-1, 15%);
+  }
+  .tier-2 {
+    background-color: $tier-2;
+    border-color: darken($tier-2, 15%);
+  }
+  .tier-3 {
+    background-color: $tier-3;
+    border-color: darken($tier-3, 15%);
+  }
+  .tier-4 {
+    background-color: $tier-4;
+    border-color: darken($tier-4, 15%);
+  }
+
+  .popover {
+    background: $brand-black;
+    color: #ffffff;
+    .popover-title {
+      background: transparent;
+      border: none;
+      p {
+        font-weight: normal;
+      }
+    }
+    span, p {
+      color: $grey-6;
+    }
+    &.top {
+      position: absolute;
+      & > .arrow:after {
+        border-top-color: $brand-black;
+      }
+    }
+  }
+
+}
+
+th.schedule-board {
+  table {
+    width: 100%;
+    table-layout: fixed;
+    tbody {
+      background: none;
+    }
+    td {
+      text-align: center;
+    }
+  }
+}
+
+td.schedule-board {
+  vertical-align: middle !important;
+}
+

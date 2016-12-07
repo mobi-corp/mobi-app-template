@@ -1,0 +1,335 @@
+---
+layout: default
+path: /route-summary
+---
+
+<div class="app-route summary-page">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="top-level">
+
+            <div class="logo-block">
+                <a href="/"><img src="/images/mobi-route-logo.png"></a>
+                <a class="arrow"></a>
+            </div>
+
+            <ul class="nav nav-tabs">
+                <li role="presentation" class=""><a href="/"><span class="icon-list-plain"></span> All plans</a></li>
+                <li role="presentation" class="active"><a href="/route-summary"><span class="icon-report"></span> Day summary</a></li>
+                <li role="presentation" class=""><a href="/route-map"><span class="icon-map-poi"></span> Map</a></li>
+            </ul>
+
+        </div>
+
+        <div id="product-nav">
+            <ul>
+                <li><a><span class="icon-home"></span> Landing page</a></li>
+                <li class="disabled"><a><span class="icon-app-territory"></span> Territory</a></li>
+                <li class=""><a><span class="icon-app-plan"></span> Plan</a></li>
+                <li class=""><a href="/resource"><span class="icon-app-resource"></span> Resource</a></li>
+                <li class="disabled"><a><span class="icon-app-appointment"></span> Appointment</a></li>
+                <li class=""><a><span class="icon-app-dispatch"></span> Dispatch</a></li>
+                <li class="current"><a><span class="icon-app-route"></span> Route</a></li>
+                <li class=""><a><span class="icon-app-connect"></span> Connect</a></li>
+                <li class=""><a><span class="icon-app-locate"></span> Locate</a></li>
+                <li class=""><a><span class="icon-app-insight"></span> Insight</a></li>
+                <li class=""><a><span class="icon-app-result"></span> Result</a></li>
+            </ul>
+        </div>
+
+        <div class="bottom-level">
+
+            <div class="row">
+                <div class="col-xs-6 breadcrumbs">
+                    <span class="icon-tree-nav"></span>
+                    <ul>
+                        <li><span><a>Company</a></span></li>
+                        <li><span>> <a>Texas</a></span></li>
+                        <li><span>> <a href="/">Austin</a></span></li>
+                        <li><span>> <a>Plan for Mon, Aug 22, 2016</a></span></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 page-actions">
+                    <button class="btn btn-green"><span class="icon-document-export"></span> Release to Dispatch</button>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div id="tree-nav">
+        <ul>
+            <li class="open">
+                <a>Company</a>
+                <ul>
+                    <li class="open">
+                        <a>Texas</a>
+                        <ul>
+                            <li class="open end"><a>Austin</a></li>
+                            <li class="closed end"><a>Dallas</a></li>
+                            <li class="closed end"><a>Houston</a></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><a>California</a></li>
+                    <li class="closed"><a>Florida</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- END HEADER -->
+
+    <!-- CONTENT -->
+
+    <section class="plan-summary">
+        <div class="row title-row">
+            <div class="col-xs-5" class="section-title">
+                <h3 role="button" data-toggle="collapse" data-target="#plan-summary-collapse" aria-expanded="false" aria-controls="plan-summary-collapse">
+                    Plan summary
+                </h3>
+            </div>
+            <div class="col-xs-7 section-actions">
+            </div>
+        </div>
+        <div class="row content-row collapse in summary" id="plan-summary-collapse">
+            <div class="col-xs-6 source-data">
+                <p>Plan source <a><strong>August2016-2902947</strong></a></p>
+                <p>Optimization profile <strong>my optimization profile</strong></p>
+            </div>
+            <div class="col-xs-6 meta-data">
+                <p>Created by <strong>system on 08/16/16 4:13p</strong></p>
+                <p><a>Last modified by <strong>system on 08/16/16 5:16p</strong></a></p>
+            </div>
+            <div class="col-xs-5 heat-map">
+                <div class="wrapper"></div>
+                <ul class="tabs row">
+                    <li class="col-xs-3 active"><span class="icon-clipboard"></span> Jobs</li>
+                    <li class="col-xs-3"><span class="icon-revenue"></span> Revenue</li>
+                    <li class="col-xs-3"><span class="icon-coin"></span> Cost</li>
+                    <li class="col-xs-3"><span class="icon-clock"></span> Time</li>
+                </ul>
+            </div>
+            <div class="col-xs-7 summary-metrics">
+                <div class="row main-metrics">
+                    <div class="col-xs-6">
+                        <span class="total-jobs metric"><strong>188</strong><span>/194</span> assigned jobs</span>
+                        <span class="revenue metric"><strong>$5,640</strong><span>/$5,820</span> total revenue</span>
+                        <div class="linechart">
+                            <div class="assigned" style="width: 97%;"></div>
+                            <div class="unassigned" style="width: 3%;"></div>
+                        </div>
+                        <span class="unassigned-jobs metric"><strong>6</strong> unassigned</span>
+                        <span class="revenue metric"><strong>$180</strong> lost revenue</span>
+                        <div class="unassigned-count">
+                            <strong>Reasons</strong>
+                            <span
+                                    class="reason"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Preferred resource is full: Preferred resource is full">
+                                Preferred resource is full: Preferred resource is full
+                            </span>
+                            <span class="count">10</span>
+                            <span
+                                    class="reason"
+                                    data-toggle="tooltip"
+                                    data-placement="top"
+                                    title="Preferred resource is full: Preferred resource is full">
+                                Preferred resource is full: Preferred resource is full
+                            </span>
+                            <span class="count">2</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 secondary-metrics">
+                        <span class="metric"><span class="icon-clipboard"></span><strong>5</strong> jobs / resource</span>
+                        <span class="metric"><span class="icon-group"></span><strong>38</strong>/40 resources with work</span>
+                        <span class="metric"><span class="icon-coin"></span><strong>$12.89</strong> cost / job</span>
+                        <span class="metric"><span class="icon-vehicle"></span><strong>3.4 mi</strong> distance / job</span>
+                    </div>
+                </div>
+                <div class="row pie-chart main-metrics">
+                    <div class="col-xs-5">
+                        <table class="late">
+                            <tr>
+                                <td colspan="2">
+                                    <span class="metric"><strong>94.1%</strong> on-time arrival</span>
+
+                                    <div class="linechart">
+                                        <div class="on-time" style="width: 94.1%;"></div>
+                                        <div class="late" style="width: 5.9%;"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="graph" height="240"><img src="/images/late-pie.png" width="150"></td>
+                                <td>
+                                    <ul class="legend">
+                                        <li class="tier-1"><span class="icon"></span> <strong>0</strong> 1-5m late</li>
+                                        <li class="tier-2"><span class="icon"></span> <strong>2</strong> 5-10m late</li>
+                                        <li class="tier-3"><span class="icon"></span> <strong>0</strong> 10-30m late</li>
+                                        <li class="tier-4"><span class="icon"></span> <strong>0</strong> >30m late</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-xs-7">
+                        <table class="cost time">
+                            <tr>
+                                <td colspan="2">
+                                    <span class="metric"><strong>$2,423 / 913h</strong> total cost / time</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="graph" height="240">
+                                    <img src="/images/cost-pie.png" width="150">
+                                </td>
+                                <td>
+                                    <ul class="legend">
+                                        <li class="onsite"><span class="icon"></span> <strong>45%</strong> onsite ($1,090 / 411h)</li>
+                                        <li class="travel"><span class="icon"></span> <strong>12%</strong> travel ($279 / 110h)</li>
+                                        <li class="commute"><span class="icon"></span> <strong>5%</strong> commute ($97 / 45h)</li>
+                                        <li class="break"><span class="icon"></span> <strong>13%</strong> break ($342 / 119h)</li>
+                                        <li class="available"><span class="icon"></span> <strong>21%</strong> available ($504 / 192h)</li>
+                                        <li class="overtime"><span class="icon"></span> <strong>4%</strong> overtime ($111 / 36h)</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="row content-row">-->
+            <!--<div class="col-xs-4">-->
+                <!--<div class="summary-box-container top">-->
+                    <!--<table>-->
+                        <!--<tr>-->
+                            <!--<td>-->
+                                <!--<p class="small-value">$721,426.16</p>-->
+                                <!--<p class="value">188</p>-->
+                                <!--<p class="label">Assigned</p>-->
+                            <!--</td>-->
+                            <!--<td class="plus">-->
+                                <!--<p class="small-value">$23,024.24</p>-->
+                                <!--<p class="value">6</p>-->
+                                <!--<p class="label">Unassigned</p>-->
+                            <!--</td>-->
+                            <!--<td class="equal">-->
+                                <!--<p class="small-value">$744,450.40</p>-->
+                                <!--<p class="value">194</p>-->
+                                <!--<p class="label">Total</p>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                    <!--</table>-->
+                    <!--<div class="linechart">-->
+                        <!--<div class="assigned" style="width: 97%;"></div>-->
+                        <!--<div class="unassigned" style="width: 3%;"></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="summary-box-container bottom unassigned-jobs">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-xs-8">-->
+                            <!--<p>Unassigned jobs</p>-->
+                        <!--</div>-->
+                        <!--<div class="col-xs-4"><a>Export data</a></div>-->
+                    <!--</div>-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-xs-8 description">-->
+                            <!--<p>Preferred resource is full: Preferred resource is full</p>-->
+                            <!--<p>Preferred resource is full: Preferred resource is full</p>-->
+                        <!--</div>-->
+                        <!--<div class="col-xs-4 count">-->
+                            <!--<p>10</p>-->
+                            <!--<p>2</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-xs-8">-->
+                <!--<div class="summary-box-container top">-->
+                    <!--<table>-->
+                        <!--<tr>-->
+                            <!--<td class="onsite">-->
+                                <!--<p class="small-value">32m</p>-->
+                                <!--<p class="value">67.8h</p>-->
+                                <!--<p class="label">Onsite</p>-->
+                            <!--</td>-->
+                            <!--<td class="travel plus">-->
+                                <!--<p class="small-value">6m</p>-->
+                                <!--<p class="value">12.6h</p>-->
+                                <!--<p class="label">Travel</p>-->
+                            <!--</td>-->
+                            <!--<td class="commute plus">-->
+                                <!--<p class="small-value">32m</p>-->
+                                <!--<p class="value">67.7h</p>-->
+                                <!--<p class="label">Commute</p>-->
+                            <!--</td>-->
+                            <!--<td class="break plus">-->
+                                <!--<p class="small-value">0m</p>-->
+                                <!--<p class="value">1.0h</p>-->
+                                <!--<p class="label">Break</p>-->
+                            <!--</td>-->
+                            <!--<td class="available plus">-->
+                                <!--<p class="small-value">35m</p>-->
+                                <!--<p class="value">74.1h</p>-->
+                                <!--<p class="label">Available</p>-->
+                            <!--</td>-->
+                            <!--<td class="equal">-->
+                                <!--<p class="small-value">105m</p>-->
+                                <!--<p class="value">223.1h</p>-->
+                                <!--<p class="label">Total time</p>-->
+                            <!--</td>-->
+                            <!--<td class="overtime">-->
+                                <!--<p class="small-value">26m</p>-->
+                                <!--<p class="value">55.1h</p>-->
+                                <!--<p class="label">Overtime</p>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                    <!--</table>-->
+                    <!--<div class="linechart">-->
+                        <!--<div class="onsite" style="width: 30%;"></div>-->
+                        <!--<div class="travel" style="width: 6%;"></div>-->
+                        <!--<div class="commute" style="width: 30%;"></div>-->
+                        <!--<div class="break" style="width: 2%;"></div>-->
+                        <!--<div class="available" style="width: 32%;"></div>-->
+                        <!--<div class="overtime" style="width: 10%;"></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="summary-box-container bottom summary-nav">-->
+                    <!--<table>-->
+                        <!--<tr>-->
+                            <!--<td>-->
+                                <!--<p class="value">94.1%</p>-->
+                                <!--<p class="label">On-time arrivals</p>-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--<p class="value">$156,431.54</p>-->
+                                <!--<p class="label">Cost</p>-->
+                            <!--</td>-->
+                            <!--<td class="active">-->
+                                <!--<p class="value">223.1h</p>-->
+                                <!--<p class="label">Time</p>-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--<p class="value">14</p>-->
+                                <!--<p class="label">Resources</p>-->
+                            <!--</td>-->
+                            <!--<td>-->
+                                <!--<p class="value">41,197.1 mi</p>-->
+                                <!--<p class="label">Distance</p>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                    <!--</table>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </section>
+
+    <!-- END CONTENT -->
+
+</div>

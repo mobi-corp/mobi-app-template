@@ -1,0 +1,185 @@
+header {
+
+// Logo, green bar area, and app nav tabs are in the top level row
+  .top-level {
+    background-color: $brand-green;
+    height: 60px;
+    position: relative;
+
+    .logo-block {
+      height: 100%;
+      background-color: $brand-black;
+      display: inline-block;
+      padding: 10px 30px 10px 10px;
+      position: relative;
+      img {
+        width: 100%;
+      }
+      .arrow {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 25px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 6px solid #fff;
+        &:hover {
+          border-top-color: $grey-6;
+        }
+      }
+    }
+  }
+
+// Tree nav, breadcrumbs, and page-related action buttons are on the bottom level row
+  .bottom-level {
+    background-color: $brand-black;
+    height: 50px;
+    color: white;
+    padding: 0 15px;
+
+    .row {
+      display: table;
+      table-layout: fixed;
+      height: 100%;
+      [class^="col"] {
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+      }
+    }
+
+    .icon-tree-nav {
+      font-size: 24px;
+      padding: 6px;
+      border-radius: 100%;
+      width: 30px;
+      height: 30px;
+      color: $grey-3;
+      position: relative;
+      top: 2px;
+      &:hover {
+        background-color: $grey-8;
+        color: white;
+      }
+    }
+
+    .breadcrumbs {
+      font-size: $small-font-size;
+      ul {
+        margin-left: 10px;
+        list-style-type: none;
+        display: inline-block;
+        position: relative;
+        top: -3px;
+        li {
+          display: inline-block;
+          span, a {
+            color: $grey-6;
+          }
+          a {
+            &:hover {
+              cursor: pointer;
+              text-decoration: none;
+              color: white;
+            }
+          }
+          &:last-child a {
+            color: white;
+          }
+        }
+      }
+
+    }
+    .page-actions {
+      text-align: right;
+      button {
+        margin-left: 10px;
+      }
+      a {
+        font-size: $small-font-size;
+      }
+    }
+  }
+
+}
+
+// Tree nav and product nav dropdowns
+#tree-nav, #product-nav {
+  position: absolute;
+  background: rgba($brand-black, 0.98);
+  min-width: 200px;
+  z-index: 99;
+  color: white;
+  ul {
+    list-style-type: none;
+    line-height: 1.5;
+  }
+}
+
+#product-nav {
+  ul {
+    margin-bottom: 10px;
+  }
+  li {
+    padding: 5px 10px;
+    &:hover {
+      background: $grey-9;
+      cursor: pointer;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  li:first-child {
+    border-bottom: 1px solid $grey-9;
+  }
+
+  .disabled, .current {
+    cursor: none;
+    color: $grey-8;
+  }
+  [class^="icon"] {
+    color: $grey-6;
+    margin-right: 10px;
+    font-size: $base-font-size * 1.25;
+  }
+}
+
+#tree-nav {
+  left: 15px;
+  padding: 0 10px 10px;
+  ul {
+    font-size: $small-font-size;
+    margin-left: 10px;
+  }
+  a {
+    color: $grey-6;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+  }
+  .open, .closed, .end {
+    &:before {
+      position: relative;
+      left: -5px;
+      width: 10px;
+      display: inline-block;
+      content: '';
+    }
+  }
+  .closed:before {
+    content: '+';
+  }
+  .open {
+    & > a {
+      color: white;
+    }
+    &:before {
+      content: '-';
+    }
+  }
+}

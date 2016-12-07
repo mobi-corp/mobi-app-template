@@ -1,0 +1,82 @@
+// Filter container
+
+.filter-container {
+  background-color: $grey-8;
+  span {
+    color: white;
+  }
+}
+
+.sub-filter {
+  background-color: $grey-2;
+}
+
+.sub-filter .title-row, .filter-container .row {
+  height: 80px;
+  display: table;
+  table-layout: fixed;
+  overflow: hidden;
+  [class^="col-"] {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+  }
+}
+
+.filter-container, .sub-filter {
+
+  input, select {
+    margin: 0 2px;
+  }
+
+  .filter-unit {
+    margin: 0 5px 0 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    padding: 25px 10px;
+    position: relative;
+    top: -1px;
+
+    .value {
+      max-width: 80px;
+    }
+    #delete-filter {
+      position: absolute;
+      right: 5px;
+      top: 1px;
+      font-size: $base-font-size * 1.25;
+      span {
+        color: $brand-black;
+      }
+      &:hover {
+        text-decoration: none;
+        span {
+          color: white;
+        }
+      }
+    }
+  }
+  
+  #add-filter {
+    margin-left: 15px;
+  }
+
+  .search {
+    text-align: right;
+    input {
+      width: 280px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.map-toggles {
+  //font-size: $small-font-size;
+  ul {
+    list-style-type: none;
+  }
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}

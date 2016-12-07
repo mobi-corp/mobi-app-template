@@ -1,0 +1,53 @@
+// Bootstrap button class overrides
+// Primary = green
+// Default = black
+// Success = blue
+//
+
+.btn {
+  border-radius: 2px;
+  border: none;
+  border-bottom: 2px solid black;
+  padding: 6px 10px;
+  color: white;
+  &:hover {
+    color: white;
+  }
+  [class^="icon"] {
+    font-size: $base-font-size * 1.25;
+    line-height: 0;
+    padding: 0;
+    top: 4px;
+    position: relative;
+  }
+}
+
+.btn-small {
+  padding: 2px 4px;
+  [class^="icon"] {
+    font-size: $base-font-size;
+  }
+}
+
+.btn-green {
+  background-color: $brand-green;
+  border-bottom-color: darken($brand-green, 15%);
+  &:hover {
+    background-color: darken($brand-green, 15%);
+  }
+}
+.btn-blue {
+  background-color: $brand-blue;
+  border-bottom-color: darken($brand-blue, 15%);
+  &:hover {
+    background-color: darken($brand-blue, 15%);
+  }
+}
+
+.btn-black {
+  background-color: $brand-black;
+  border-bottom-color: darken($brand-black, 15%);
+  &:hover {
+    background-color: darken($brand-black, 15%);
+  }
+}

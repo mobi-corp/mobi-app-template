@@ -1,0 +1,512 @@
+.app-route {
+
+  .heat-map {
+    .wrapper {
+      background: url('/images/laheatmap.png') no-repeat;
+      background-size: cover;
+      height: 500px;
+    }
+    .tabs {
+      list-style-type: none;
+      padding: 0 15px;
+      li {
+        background-color: $grey-1;
+        text-align: center;
+        padding: 15px;
+        &.active, &:hover {
+          background-color: $brand-black;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .main-metrics {
+    display: table;
+    table-layout: fixed;
+    & > [class^="col-"] {
+      display: table-cell;
+      vertical-align: middle;
+      float: none;
+    }
+    .linechart {
+      margin: 10px 0 0;
+    }
+    .metric {
+      font-weight: 300;
+      strong {
+        font-size: 50px;
+      }
+      span {
+        font-size: 36px;
+      }
+    }
+    .revenue {
+      display: block;
+      font-style: italic;
+      color: $grey-6;
+      margin: -10px 0 10px;
+      * {
+        font-size: $small-font-size !important;
+      }
+    }
+    .unassigned-jobs {
+      strong {
+        font-size: 32px;
+      }
+    }
+    .unassigned-count {
+      font-size: $small-font-size;
+      background-color: $grey-1;
+      padding: 10px 15px;
+      @include clearfix;
+      strong {
+        display: block;
+      }
+      span {
+        display: inline-block;
+        float: left;
+      }
+      .reason {
+        width: 75%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+      .count {
+        width: 25%;
+        text-align: right;
+      }
+    }
+    .secondary-metrics {
+      .metric {
+        display: block;
+        margin-left: 30px;
+        line-height: 0.5;
+        strong {
+          font-size: 21px;
+        }
+      }
+      [class^="icon-"] {
+        position: relative;
+        top: 11px;
+        right: 10px;
+        color: $grey-4;
+      }
+    }
+    &.pie-chart {
+      border-top: 1px solid $grey-2;
+      padding-top: 15px;
+      margin-top: 15px;
+      .graph {
+        text-align: right;
+      }
+      table {
+        width: 100%;
+        text-align: center;
+      }
+      .legend {
+        list-style-type: none;
+        text-align: left;
+        display: inline-block;
+        margin: 30px auto;
+        li {
+          display: block;
+        }
+      }
+      .metric strong {
+        display: block;
+        line-height: 1;
+      }
+    }
+    h1 strong {
+      font-size: 50px;
+    }
+  }
+
+
+  table.calendar {
+    table-layout: fixed;
+    width: 100%;
+    th {
+      text-align: center;
+      font-size: $base-font-size * 1.125;
+      &.not-selected {
+        color: $grey-4;
+      }
+    }
+    td {
+      font-size: $small-font-size * 0.875;
+      vertical-align: top;
+      .dispatch {
+        color: $grey-6;
+        text-align: center;
+        height: 60px;
+        padding-top: 10px;
+        p {
+          margin: 0;
+        }
+      }
+      section {
+        background: white;
+        margin: 5px;
+        padding: 5px;
+        @include clearfix;
+        div {
+          @include clearfix;
+        }
+        span {
+          display: inline-block;
+          float: left;
+        }
+        .available {
+          color: $available-color;
+        }
+        .travel {
+          color: $travel-color;
+        }
+        .onsite {
+          color: $onsite-color;
+        }
+        .overtime {
+          color: $overtime-color;
+        }
+        .late {
+          color: $tier-4;
+        }
+      }
+      .break {
+        margin-top: 15px;
+      }
+      .value {
+        text-align: right;
+        width: 40%;
+      }
+      .name {
+        color: $grey-7;
+        width: 55%;
+        margin-left: 5%;
+      }
+      .linechart {
+        margin: 10px 0 5px;
+        height: 6px;
+        .overtime {
+          height: 3px;
+        }
+      }
+    }
+  }
+
+  .draft-plans table.list {
+    font-size: $small-font-size * 0.875;
+  }
+
+  .source-data, .meta-data {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    p {
+      margin: 0;
+      color: $grey-8;
+    }
+    a {
+      cursor: pointer;
+    }
+  }
+
+  .meta-data {
+    text-align: right;
+  }
+
+  .summary-box-container {
+    padding: 15px;
+
+    table {
+      width: 100%;
+      table-layout: fixed;
+      td {
+        position: relative;
+      }
+    }
+
+    &.top {
+      margin-top: 15px;
+      text-align: center;
+      background: white;
+      height: 130px;
+    }
+
+    &.bottom {
+      margin-bottom: 15px;
+      background: $grey-2;
+      height: 110px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .plus, .minus, .equal {
+      .value:before {
+        font-size: 36px;
+        position: absolute;
+        left: -10%;
+        top: 8px;
+        color: $grey-2;
+      }
+    }
+
+    .plus .value:before {
+      content: '+';
+    }
+    .minus .value:before {
+      content: '-';
+    }
+    .equal .value:before {
+      content: '=';
+    }
+
+    .label, .small-value {
+      color: $grey-6;
+    }
+    .small-value {
+      font-size: $small-font-size;
+    }
+    .value {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .label {
+      font-weight: normal;
+      font-size: $base-font-size;
+    }
+
+    .linechart {
+      margin-top: 10px;
+    }
+
+    .onsite .value {
+      color: $onsite-color;
+    }
+    .travel .value {
+      color: $travel-color;
+    }
+    .commute .value {
+      color: $commute-color;
+    }
+    .break .value {
+      color: $break-color;
+    }
+    .available .value {
+      color: $available-color;
+    }
+    .overtime .value {
+      color: $overtime-color;
+    }
+  }
+
+  .unassigned-jobs {
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 700;
+    }
+    .description, .count {
+      margin-top: 15px;
+      p {
+        font-weight: normal;
+      }
+    }
+  }
+
+  .summary-nav {
+    padding: 0;
+    table {
+      height: 100%;
+    }
+    td {
+      text-align: center;
+    }
+    td:hover, .active {
+      background-color: white;
+      cursor: pointer;
+    }
+  }
+
+  // MAP
+
+  .map-container {
+    background: url('/images/google-maps.png') no-repeat;
+    background-size: cover;
+    height: 500px;
+  }
+
+  .content-row {
+    position: relative;
+  }
+
+  .map-slider-menu-container {
+    width: 320px;
+    position: absolute;
+    right: -279px;
+    top: 0;
+    -webkit-transition: right 1s ease;
+    -moz-transition: right 1s ease;
+    -o-transition: right 1s ease;
+    -ms-transition: right 1s ease;
+    transition: right 1s ease;
+    height: 100%;
+    padding: 15px 10px;
+    background: rgba(255, 255, 255, 0.9);
+    &.open {
+      right: 0;
+    }
+    .search {
+      width: 100%;
+      border: 1px solid $grey-1;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+    table {
+      width: 100%;
+      font-size: $small-font-size;
+      th, td {
+        text-align: left;
+        padding: 2px 5px;
+      }
+    }
+  }
+
+  .map-slider-menu {
+    overflow: scroll;
+    height: 93%;
+  }
+
+  // JOB LIST
+
+  .unassigned table {
+    table-layout: auto;
+  }
+
+  table.list {
+    td {
+      vertical-align: middle;
+    }
+    .collapse {
+      background-color: $grey-0;
+      & > td {
+        padding: 0 !important;
+      }
+      table {
+        width: 100%;
+        tbody {
+          background-color: transparent;
+        }
+        th, td {
+          border-color: $grey-1;
+          padding: 5px 10px;
+        }
+      }
+    }
+    .tag, .id, .service-order, .customer, .service-type, .address, .reason {
+      text-align: left;
+    }
+  }
+
+  .legend {
+    text-align: right;
+    padding-right: 15px;
+    & > * {
+      padding: 5px 12px;
+      display: inline-block;
+      font-size: $small-font-size;
+      .icon {
+        width: 12px;
+        height: 12px;
+        background: black;
+        display: inline-block;
+      }
+    }
+    .job .icon {
+      background-color: $customer-color;
+    }
+    .forced .icon {
+      background-color: darken($customer-color, 15%);
+    }
+    .break .icon {
+      background-color: $break-color;
+    }
+    .tier-1 .icon {
+      background-color: $tier-1;
+    }
+    .tier-2 .icon {
+      background-color: $tier-2;
+    }
+    .tier-3 .icon {
+      background-color: $tier-3;
+    }
+    .tier-4 .icon {
+      background-color: $tier-4;
+    }
+    .onsite .icon {
+      background-color: $onsite-color;
+    }
+    .travel .icon {
+      background-color: $travel-color;
+    }
+    .commute .icon {
+      background-color: $commute-color;
+    }
+    .available .icon {
+      background-color: $available-color;
+    }
+    .overtime .icon {
+      background-color: $overtime-color;
+    }
+  }
+
+  .job-list .legend {
+    .travel, .wait {
+      .icon {
+        height: 4px;
+        position: relative;
+        top: -3px;
+      }
+    }
+    .travel .icon {
+      background-color: $brand-black;
+    }
+    .wait .icon {
+      background-color: goldenrod;
+    }
+    .shift {
+      background-color: $grey-2;
+    }
+    .available {
+      background-color: #84c4ec;
+    }
+    .overtime {
+      background-color: rgba($overtime-color, 0.5);
+    }
+  }
+
+  .map-circle {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 100%;
+    background-color: $customer-color;
+    border: 2px solid transparent;
+    position: relative;
+    top: 2px;
+    &.active, &:hover {
+      border-color: $brand-black;
+      cursor: pointer;
+    }
+  }
+
+}

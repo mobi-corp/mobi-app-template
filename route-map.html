@@ -1,0 +1,690 @@
+---
+layout: default
+path: /route-map
+---
+
+<div class="app-route">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="top-level">
+
+            <div class="logo-block">
+                <a href="/"><img src="/images/mobi-route-logo.png"></a>
+                <a class="arrow"></a>
+            </div>
+
+            <ul class="nav nav-tabs">
+                <li role="presentation" class=""><a href="/"><span class="icon-list-plain"></span> All plans</a></li>
+                <li role="presentation" class=""><a href="/route-summary"><span class="icon-report"></span> Day summary</a></li>
+                <li role="presentation" class="active"><a href="#"><span class="icon-map-poi"></span> Map</a></li>
+            </ul>
+
+        </div>
+
+        <div id="product-nav">
+            <ul>
+                <li><a><span class="icon-home"></span> Landing page</a></li>
+                <li class="disabled"><a><span class="icon-app-territory"></span> Territory</a></li>
+                <li class=""><a><span class="icon-app-plan"></span> Plan</a></li>
+                <li class=""><a href="/resource"><span class="icon-app-resource"></span> Resource</a></li>
+                <li class="disabled"><a><span class="icon-app-appointment"></span> Appointment</a></li>
+                <li class=""><a><span class="icon-app-dispatch"></span> Dispatch</a></li>
+                <li class="current"><a><span class="icon-app-route"></span> Route</a></li>
+                <li class=""><a><span class="icon-app-connect"></span> Connect</a></li>
+                <li class=""><a><span class="icon-app-locate"></span> Locate</a></li>
+                <li class=""><a><span class="icon-app-insight"></span> Insight</a></li>
+                <li class=""><a><span class="icon-app-result"></span> Result</a></li>
+            </ul>
+        </div>
+
+        <div class="bottom-level">
+
+            <div class="row">
+                <div class="col-xs-6 breadcrumbs">
+                    <span class="icon-tree-nav"></span>
+                    <ul>
+                        <li><span><a>Company</a></span></li>
+                        <li><span>> <a>Texas</a></span></li>
+                        <li><span>> <a href="/">Austin</a></span></li>
+                        <li><span>> <a>Plan for Mon, Aug 22, 2016</a></span></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 page-actions">
+                    <button class="btn btn-green"><span class="icon-document-export"></span> Release to Dispatch</button>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div id="tree-nav">
+        <ul>
+            <li class="open">
+                <a>Company</a>
+                <ul>
+                    <li class="open">
+                        <a>Texas</a>
+                        <ul>
+                            <li class="open end"><a>Austin</a></li>
+                            <li class="closed end"><a>Dallas</a></li>
+                            <li class="closed end"><a>Houston</a></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><a>California</a></li>
+                    <li class="closed"><a>Florida</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- END HEADER -->
+
+    <!-- CONTENT -->
+
+    <section class="plan-map sub-filter">
+        <div class="row title-row">
+            <div class="col-xs-2" class="section-title">
+                <h3 role="button" data-toggle="collapse" data-target="#map-collapse" aria-expanded="false" aria-controls="map-collapse">
+                    Map
+                </h3>
+            </div>
+            <div class="col-xs-8 map-toggles">
+                <ul>
+                    <li><input type="checkbox" checked> <span>Jobs</span></li>
+                    <li><input type="checkbox" checked> <span>Routes</span></li>
+                    <li><input type="checkbox" checked> <span>Job labels</span></li>
+                    <li><input type="checkbox"> <span>Job sequences</span></li>
+                    <li><input type="checkbox"> <span>Route area</span></li>
+                    <li><input type="checkbox"> <span>mobi work area</span></li>
+                    <li><input type="checkbox"> <span>Start/end locations</span></li>
+                </ul>
+            </div>
+            <div class="col-xs-2">
+                <button class="btn btn-blue"><span class="icon-refresh"></span> Redo search in map</button>
+            </div>
+        </div>
+        <div class="row content-row collapse in summary" id="map-collapse">
+            <div class="map-slider-menu-container open">
+                <div class="row">
+                    <div class="col-xs-2">
+                        <button id="collapse-map-slider" class="btn btn-black btn-small"><span class="icon-arrow-right"></span></button>
+                    </div>
+                    <div class="col-xs-10">
+                        <input class="search" type="text" placeholder="Search by name, ID, or label">
+                    </div>
+                </div>
+                <div class="map-slider-menu">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="id">ID</th>
+                                <th class="name">Name</th>
+                                <th class="tag">Label</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="map-circle" style="background-color: blue;"></span></td>
+                                <td class="id">131392</td>
+                                <td class="name">Manuel, Sid</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle" style="background-color: green;"></span></td>
+                                <td class="id">131191</td>
+                                <td class="name">Bryce, Donald</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle" style="background-color: yellow;"></span></td>
+                                <td class="id">131118</td>
+                                <td class="name">Mendoza, John</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle" style="background-color: darkred;"></span></td>
+                                <td class="id">131110</td>
+                                <td class="name">Williams, Brett</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle" style="background-color: purple;"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle" style="background-color: cadetblue;"></span></td>
+                                <td class="id">131922</td>
+                                <td class="name">Carmichael, Sonny</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle" style="background-color: orange"></span></td>
+                                <td class="id">131803</td>
+                                <td class="name">Wright, Barry</td>
+                                <td class="tag">BIZ, CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                            <tr>
+                                <td><span class="map-circle"></span></td>
+                                <td class="id">131400</td>
+                                <td class="name">Howell, Robert</td>
+                                <td class="tag">CON</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="map-container"></div>
+        </div>
+    </section>
+
+    <section class="job-list sub-filter">
+        <div class="row title-row">
+            <div class="col-xs-2 section-title">
+                <h3 role="button" data-toggle="collapse" data-target="#job-list-collapse" aria-expanded="false" aria-controls="job-list-collapse">
+                    Job list
+                </h3>
+            </div>
+            <div class="col-xs-4">
+
+                <div class="filter-unit" id="filter-unit-2">
+                    <span>Filter list by</span>
+                    <select>
+                        <option>On-time arrivals</option>
+                        <option>Assigned jobs</option>
+                    </select>
+                    <select>
+                        <option>≥</option>
+                        <option>></option>
+                        <option><</option>
+                        <option>≤</option>
+                        <option>=</option>
+                    </select>
+                    <input class="value" type="number" value="97">
+                    <span>%</span>
+                    <a id="delete-filter"><span class="icon-x"></span></a>
+                </div>
+                <button class="btn btn-blue" id="add-filter"><span class="icon-filter"></span> Add filter</button>
+            </div>
+            <div class="col-xs-3 search">
+                <input type="text" placeholder="Search plans by name or ID">
+            </div>
+            <div class="col-xs-3 section-tabs">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a id="assigned"><span class="icon-clipboard-check"></span> Assigned</a>
+                    </li>
+                    <li>
+                        <a id="unassigned"><span class="icon-question-mark"></span> Unassigned</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row content-row collapse in assigned" id="job-list-collapse">
+            <div class="legend">
+                <div class="job"><span class="icon"></span> <span>Job</span></div>
+                <div class="forced"><span class="icon"></span> <span>Forced</span></div>
+                <div class="tier-1"><span class="icon"></span> <span>1-5m Late</div>
+                <div class="tier-2"><span class="icon"></span> <span>5-10m</span></div>
+                <div class="tier-3"><span class="icon"></span> <span>1-30m</span></div>
+                <div class="tier-4"><span class="icon"></span> <span>>30m</span></div>
+                <div class="travel"><span class="icon"></span> <span>Travel</span></div>
+                <div class="wait"><span class="icon"></span> <span>Wait</span></div>
+                <div class="shift"><span>Shift</span></div>
+                <div class="available"><span>Available</span></div>
+                <div class="overtime"><span>Overtime</span></div>
+            </div>
+            <table class="list">
+                <thead>
+                    <tr>
+                        <th class="id" colspan="4">ID</th>
+                        <th class="name" colspan="5">Name</th>
+                        <th class="tag" colspan="5">Label</th>
+                        <th class="on-time" colspan="2">On-time arrival</th>
+                        <th class="capacity" colspan="2"> Capacity</th>
+                        <th class="late-jobs" colspan="2">Jobs/Late</th>
+                        <th class="schedule-board" colspan="15">
+                            <table>
+                                <tr>
+                                    <td class="hour">6</td>
+                                    <td class="hour">7</td>
+                                    <td class="hour">8</td>
+                                    <td class="hour">9</td>
+                                    <td class="hour">10</td>
+                                    <td class="hour">11</td>
+                                    <td class="hour">12</td>
+                                    <td class="hour">1</td>
+                                    <td class="hour">2</td>
+                                    <td class="hour">3</td>
+                                    <td class="hour">4</td>
+                                    <td class="hour">5</td>
+                                    <td class="hour">6</td>
+                                    <td class="hour">7</td>
+                                    <td class="hour">8</td>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="id" colspan="4">
+                            <a class="expand-row"></a>
+                            <span class="map-circle" style="background-color: blue;"></span>
+                            131392
+                        </td>
+                        <td class="name" colspan="5">Manuel, Sid</td>
+                        <td class="tag" colspan="5">CON</td>
+                        <td class="on-time" colspan="2">-</td>
+                        <td class="capacity" colspan="2">0%</td>
+                        <td class="late-jobs" colspan="2">-</td>
+                        <td class="schedule-board" colspan="15">
+                            <div class="wrapper">
+                                <div class="available" style="width: 80%; left: 5%;"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="id" colspan="4">
+                            <a class="expand-row" data-toggle="collapse" href="#bryce-donald" aria-expanded="false" aria-controls="bryce-donald"></a>
+                            <span class="map-circle" style="background-color: green;"></span>
+                            131191
+                        </td>
+                        <td class="name" colspan="5">Bryce, Donald</td>
+                        <td class="tag" colspan="5">CON</td>
+                        <td class="on-time" colspan="2">98.5%</td>
+                        <td class="capacity" colspan="2">64.6%</td>
+                        <td class="late-jobs" colspan="2"><strong>3</strong>/0</td>
+                        <td class="schedule-board" colspan="15">
+                            <div class="wrapper">
+                                <div class="shift" style="width: 70%; left: 15%;"></div>
+                                <div class="travel" style="width: 73%; left: 13%;"></div>
+                                <div class="break" style="width: 5%; left: 45%;"></div>
+                                <div
+                                        class="job"
+                                        style="width: 16%; left: 25%;"
+                                        data-toggle="popover"
+                                        data-html="true"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="FA-106-0915-30-147842030321 <p>(UT Student Center)</p>"
+                                        data-content="9:11a <span>|</span> 130m <span>|</span> WO003P <span>|</span> 8:00–12:00p">
+                                </div>
+                                <div
+                                        class="job"
+                                        style="width: 13%; left: 52%;"
+                                        data-toggle="popover"
+                                        data-html="true"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="FLOAT-113-00-COOP-1471934045 <p>(CO-OP)</p>"
+                                        data-content="1:15p <span>|</span> 120m <span>|</span> WO003P">
+                                </div>
+                                <div
+                                        class="job"
+                                        style="width: 11%; left: 70%;"
+                                        data-toggle="popover"
+                                        data-html="true"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="TC-104-1145-60-14703123251 <p>(Mini Max)</p>"
+                                        data-content="4:00p <span>|</span> 90m <span>|</span> WO003P <span>|</span> 2:00–4:00p">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="collapse" id="bryce-donald">
+                        <td colspan="35">
+                            <table class="">
+                                <thead>
+                                <tr>
+                                    <th class=""></th>
+                                    <th class="service-order">Service order ID</th>
+                                    <th class="customer">Customer</th>
+                                    <th class="service-type">Service type</th>
+                                    <th class="address">Address</th>
+                                    <th class="time-window">Time window</th>
+                                    <th class="duration">Duration</th>
+                                    <th class="arrival">Arrival</th>
+                                    <th class="distance">Distance</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="service-order">1</td>
+                                    <td class="service-order"><a>FA-106-0915-30-147842030321</a></td>
+                                    <td class="customer"><a>UT Student Center</a></td>
+                                    <td class="service-type">WO003P</td>
+                                    <td class="address">100 East Dean Keaton St, Austin, TX 78705	</td>
+                                    <td class="time-window">8:00–12:00p</td>
+                                    <td class="duration">130m</td>
+                                    <td class="arrival">9:11a</td>
+                                    <td class="distance">7.8 mi</td>
+                                </tr>
+                                <tr>
+                                    <td class="service-order"></td>
+                                    <td class="service-order">Break</td>
+                                    <td class="customer"></td>
+                                    <td class="service-type"></td>
+                                    <td class="address"></td>
+                                    <td class="time-window"></td>
+                                    <td class="duration">45m</td>
+                                    <td class="arrival">12:20p</td>
+                                    <td class="distance"></td>
+                                </tr>
+                                <tr>
+                                    <td class="service-order">2</td>
+                                    <td class="service-order"><a>FLOAT-113-00-COOP-1471934045</a></td>
+                                    <td class="customer"><a>CO-OP</a></td>
+                                    <td class="service-type">WO003P</td>
+                                    <td class="address">2304 Guadalupe St, Austin, TX, 78705</td>
+                                    <td class="time-window"></td>
+                                    <td class="duration">120m</td>
+                                    <td class="arrival">1:15p</td>
+                                    <td class="distance">3.6 mi</td>
+                                </tr>
+                                <tr>
+                                    <td class="service-order">3</td>
+                                    <td class="service-order"><a>TC-104-1145-60-14703123251</a></td>
+                                    <td class="customer"><a>Mini Max</a></td>
+                                    <td class="service-type">WO002</td>
+                                    <td class="address">7108 Woodward Avenue, Austin, TX 78701	</td>
+                                    <td class="time-window">2:00–4:00p</td>
+                                    <td class="duration">90m</td>
+                                    <td class="arrival">4:00p</td>
+                                    <td class="distance">4.2 mi</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="id" colspan="4">
+                            <a class="expand-row"></a>
+                            <span class="map-circle" style="background-color: yellow;"></span>
+                            131191
+                        </td>
+                        <td class="name" colspan="5">Mendoza, John</td>
+                        <td class="tag" colspan="5">CON</td>
+                        <td class="on-time" colspan="2">74.5%</td>
+                        <td class="capacity" colspan="2">89.1%</td>
+                        <td class="late-jobs" colspan="2"><strong>4</strong>/1</td>
+                        <td class="schedule-board" colspan="15">
+                            <div class="wrapper">
+                                <div class="shift" style="width: 70%; left: 15%;"></div>
+                                <div class="travel" style="width: 56%; left: 12%;"></div>
+                                <div class="wait" style="width: 12%; left: 68%;"></div>
+                                <div class="travel" style="width: 12%; left: 80%;"></div>
+                                <div class="break" style="width: 5%; left: 49%;"></div>
+                                <div
+                                        class="job"
+                                        style="width: 9%; left: 20%;"
+                                        data-toggle="popover"
+                                        data-html="true"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="FA-106-0915-30-147842030321 <p>(UT Student Center)</p>"
+                                        data-content="6:30a <span>|</span> 75m <span>|</span> WO003P <span>|</span> 6:00a–7:00a">
+                                </div>
+                                <div
+                                        class="job tier-3"
+                                        style="width: 13%; left: 32%;"
+                                        data-toggle="popover"
+                                        data-html="true"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="FA-106-0915-30-147842030321 <p>(UT Student Center)</p>"
+                                        data-content="6:30a <span>|</span> 75m <span>|</span> WO003P <span>|</span> 6:00a–7:00a">
+                                </div>
+                                <div
+                                        class="job"
+                                        style="width: 6%; left: 58%;"
+                                        data-toggle="popover"
+                                        data-html="true"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="FA-106-0915-30-147842030321 <p>(UT Student Center)</p>"
+                                        data-content="6:30a <span>|</span> 75m <span>|</span> WO003P <span>|</span> 6:00a–7:00a">
+                                </div>
+                                <div
+                                        class="job"
+                                        style="width: 8%; left: 73%;"
+                                        data-toggle="popover"
+                                        data-html="true"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="FA-106-0915-30-147842030321 <p>(UT Student Center)</p>"
+                                        data-content="6:30a <span>|</span> 75m <span>|</span> WO003P <span>|</span> 6:00a–7:00a">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="id" colspan="4">
+                            <a class="expand-row"></a>
+                            <span class="map-circle" style="background-color: darkred;"></span>
+                            131110
+                        </td>
+                        <td class="name" colspan="5">Williams, Brett</td>
+                        <td class="tag" colspan="5">CON</td>
+                        <td class="on-time" colspan="2">89.5%</td>
+                        <td class="capacity" colspan="2">65.6%</td>
+                        <td class="late-jobs" colspan="2"><strong>5</strong>/0</td>
+                        <td class="schedule-board" colspan="15">
+                            <div class="wrapper">
+                                <div class="shift" style="width: 65%; left: 10%;"></div>
+                                <div class="overtime" style="width: 5%; left: 75%;"></div>
+                                <div class="travel" style="width: 71%; left: 9%;"></div>
+                                <div class="break" style="width: 5%; left: 48%;"></div>
+                                <div
+                                        class="job"
+                                        style="width: 11%; left: 12%;"
+                                        data-toggle="popover"
+                                        data-html="true"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="FA-106-0915-30-147842030321 <p>(UT Student Center)</p>"
+                                        data-content="6:30a <span>|</span> 75m <span>|</span> WO003P <span>|</span> 6:00a–7:00a">
+                                </div>
+                                <div
+                                        class="job"
+                                        style="width: 13%; left: 25%;"
+                                        data-toggle="popover"
+                                        data-html="true"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="FA-106-0915-30-147842030321 <p>(UT Student Center)</p>"
+                                        data-content="6:30a <span>|</span> 75m <span>|</span> WO003P <span>|</span> 6:00a–7:00a">
+                                </div>
+                                <div
+                                        class="job"
+                                        style="width: 7%; left: 40%;"
+                                        data-toggle="popover"
+                                        data-html="true"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="FA-106-0915-30-147842030321 <p>(UT Student Center)</p>"
+                                        data-content="6:30a <span>|</span> 75m <span>|</span> WO003P <span>|</span> 6:00a–7:00a">
+                                </div>
+                                <div
+                                        class="job"
+                                        style="width: 6%; left: 55%;"
+                                        data-toggle="popover"
+                                        data-html="true"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="FA-106-0915-30-147842030321 <p>(UT Student Center)</p>"
+                                        data-content="6:30a <span>|</span> 75m <span>|</span> WO003P <span>|</span> 6:00a–7:00a">
+                                </div>
+                                <div
+                                        class="job"
+                                        style="width: 12%; left: 67%;"
+                                        data-toggle="popover"
+                                        data-html="true"
+                                        data-placement="top"
+                                        title=""
+                                        data-original-title="FA-106-0915-30-147842030321 <p>(UT Student Center)</p>"
+                                        data-content="6:30a <span>|</span> 75m <span>|</span> WO003P <span>|</span> 6:00a–7:00a">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination-row row">
+                <div class="col-xs-12">
+                    <button class="btn btn-small btn-black" disabled><span class="icon-arrow-left"></span></button>
+                    <span>1 of 1</span>
+                    <button class="btn btn-small btn-black" disabled><span class="icon-arrow-right"></span></button>
+                </div>
+            </div>
+        </div>
+        <div class="row content-row collapse in unassigned">
+            <table class="list">
+                <thead>
+                    <tr>
+                        <th class="service-order">Service order ID</th>
+                        <th class="customer">Customer</th>
+                        <th class="service-type">Service type</th>
+                        <th class="address">Address</th>
+                        <th class="time-window">Window</th>
+                        <th class="duration">Duration</th>
+                        <th class="reason">Reason</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="service-order"><span class="map-circle"></span> PT-303-493-0-395235834</td>
+                        <td class="customer">Mondo Sports Therapy</td>
+                        <td class="service-type">WO002</td>
+                        <td class="address">4201 Marathon Blvd. Suite 204 Austin, TX 78756</td>
+                        <td class="time-window"></td>
+                        <td class="duration">30m</td>
+                        <td class="reason">Reason for not being assigned</td>
+                    </tr>
+                    <tr>
+                        <td class="service-order"><span class="map-circle"></span> ORTHO-394-30-4-3048489</td>
+                        <td class="customer">S. Brent Brotzman</td>
+                        <td class="service-type">WO003P</td>
+                        <td class="address">11652 Jollyville Rd, Austin, TX 78759</td>
+                        <td class="time-window">4:00-6:00p</td>
+                        <td class="duration">60m</td>
+                        <td class="reason">Reason for not being assigned</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination-row row">
+                <div class="col-xs-12">
+                    <button class="btn btn-small btn-black" disabled><span class="icon-arrow-left"></span></button>
+                    <span>1 of 1</span>
+                    <button class="btn btn-small btn-black" disabled><span class="icon-arrow-right"></span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- END CONTENT -->
+
+</div>
