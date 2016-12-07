@@ -32,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result-cost.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="result-cost.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/result-cost.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.0">
-              <caret line="171" column="78" selection-start-line="171" selection-start-column="78" selection-end-line="171" selection-end-column="78" />
+            <state vertical-scroll-proportion="0.81632656">
+              <caret line="93" column="44" selection-start-line="93" selection-start-column="44" selection-end-line="93" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -52,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result-cost-region.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="result-cost-region.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/result-cost-region.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6398305">
+            <state vertical-scroll-proportion="-8.882353">
               <caret line="47" column="89" selection-start-line="47" selection-start-column="89" selection-end-line="47" selection-end-column="89" />
               <folding />
             </state>
@@ -163,8 +163,8 @@
         <option value="$PROJECT_DIR$/_sass/_layout.scss" />
         <option value="$PROJECT_DIR$/result.html" />
         <option value="$PROJECT_DIR$/_sass/products/_result.scss" />
-        <option value="$PROJECT_DIR$/result-cost.html" />
         <option value="$PROJECT_DIR$/result-cost-region.html" />
+        <option value="$PROJECT_DIR$/result-cost.html" />
       </list>
     </option>
   </component>
@@ -585,12 +585,12 @@
       <workItem from="1480533642011" duration="4754000" />
       <workItem from="1480543156205" duration="19719000" />
       <workItem from="1480697751737" duration="5620000" />
-      <workItem from="1480711344728" duration="35782000" />
+      <workItem from="1480711344728" duration="35860000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66818000" />
+    <option name="totallyTimeSpent" value="66896000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="23" width="1386" height="877" extended-state="6" />
@@ -1194,18 +1194,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result-cost.html">
+    <entry file="file://$PROJECT_DIR$/result-cost-region.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0">
-          <caret line="171" column="78" selection-start-line="171" selection-start-column="78" selection-end-line="171" selection-end-column="78" />
+        <state vertical-scroll-proportion="-8.882353">
+          <caret line="47" column="89" selection-start-line="47" selection-start-column="89" selection-end-line="47" selection-end-column="89" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result-cost-region.html">
+    <entry file="file://$PROJECT_DIR$/result-cost.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6398305">
-          <caret line="47" column="89" selection-start-line="47" selection-start-column="89" selection-end-line="47" selection-end-column="89" />
+        <state vertical-scroll-proportion="0.81632656">
+          <caret line="93" column="44" selection-start-line="93" selection-start-column="44" selection-end-line="93" selection-end-column="44" />
           <folding />
         </state>
       </provider>
