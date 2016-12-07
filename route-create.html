@@ -12,14 +12,14 @@ path: /route-summary
         <div class="top-level">
 
             <div class="logo-block">
-                <a href="/"><img src="/images/mobi-route-logo.png"></a>
+                <a href="{{ "/" | prepend: site.baseurl }}"><img src="{{ "/images/mobi-route-logo.png" | prepend: site.baseurl }}"></a>
                 <a class="arrow"></a>
             </div>
 
             <ul class="nav nav-tabs">
-                <li role="presentation" class=""><a href="/"><span class="icon-list-plain"></span> All plans</a></li>
-                <li role="presentation" class=""><a href="/route-summary"><span class="icon-report"></span> Day summary</a></li>
-                <li role="presentation" class=""><a href="/route-map"><span class="icon-map-poi"></span> Map</a></li>
+                <li role="presentation" class=""><a href="{{ "/" | prepend: site.baseurl }}"><span class="icon-list-plain"></span> All plans</a></li>
+                <li role="presentation" class=""><a href="{{ "/route-summary" | prepend: site.baseurl }}"><span class="icon-report"></span> Day summary</a></li>
+                <li role="presentation" class=""><a href="{{ "/route-map" | prepend: site.baseurl }}"><span class="icon-map-poi"></span> Map</a></li>
             </ul>
 
         </div>
@@ -29,7 +29,7 @@ path: /route-summary
                 <li><a><span class="icon-home"></span> Landing page</a></li>
                 <li class="disabled"><a><span class="icon-app-territory"></span> Territory</a></li>
                 <li class=""><a><span class="icon-app-plan"></span> Plan</a></li>
-                <li class=""><a href="/resource"><span class="icon-app-resource"></span> Resource</a></li>
+                <li class=""><a href="{{ "/resource" | prepend: site.baseurl }}"><span class="icon-app-resource"></span> Resource</a></li>
                 <li class="disabled"><a><span class="icon-app-appointment"></span> Appointment</a></li>
                 <li class=""><a><span class="icon-app-dispatch"></span> Dispatch</a></li>
                 <li class="current"><a><span class="icon-app-route"></span> Route</a></li>
@@ -48,7 +48,7 @@ path: /route-summary
                     <ul>
                         <li><span><a>Company</a></span></li>
                         <li><span>> <a>Texas</a></span></li>
-                        <li><span>> <a href="/">Austin</a></span></li>
+                        <li><span>> <a href="{{ "/" | prepend: site.baseurl }}">Austin</a></span></li>
                         <li><span>> <a>Create plan</a></span></li>
                     </ul>
                 </div>
