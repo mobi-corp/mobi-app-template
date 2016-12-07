@@ -20,11 +20,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-.app-resource {
-  background-color: $grey-8;
-  color: white;
-}
-
 
 // Content area
 
@@ -80,3 +75,19 @@ body > section {
 }
 
 
+// Several products share these:
+
+.app-resource, .app-result {
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  th, td {
+    padding: 5px 10px;
+  }
+  td {
+    color: $grey-6;
+    background-color: white;
+    border-bottom: 1px solid $grey-1;
+  }
+}

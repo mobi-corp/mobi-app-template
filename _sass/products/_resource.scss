@@ -1,5 +1,10 @@
 .app-resource {
 
+  &.home {
+    background-color: $grey-8;
+    color: white;
+  }
+
   height: 100vh;
   //padding: 30px;
 
@@ -26,9 +31,10 @@
         color: white;
       }
     }
-    table {
-      table-layout: fixed;
-      width: 100%;
+    table td {
+      background-color: transparent;
+      border: none;
+      color: white;
     }
     .icon {
       text-align: center;

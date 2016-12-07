@@ -1,0 +1,51 @@
+.app-result {
+
+  .content-row {
+    & > * {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  table {
+    font-size: $small-font-size;
+    th, td {
+      text-align: right;
+    }
+    td {
+      height: 60px;
+      a {
+        color: $grey-6;
+      }
+      &.metric, &.level, &.metric a, &.level a {
+        font-weight: bold;
+        text-align: left;
+        color: $brand-black;
+      }
+    }
+    .current td {
+      background-color: rgba($brand-green, 0.1);
+      &, a {
+        color: $brand-black;
+      }
+    }
+
+// Indent levels depending on hierarchy
+    @for $i from 1 through 10 {
+      .lvl-#{$i} .level {
+        padding-left: (15 * $i) + px;
+      }
+    }
+
+  }
+
+  .per-visit, .per-driver {
+    p {
+      color: $grey-4;
+      font-style: italic;
+      font-weight: normal;
+    }
+  }
+
+
+}
