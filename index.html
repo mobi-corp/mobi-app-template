@@ -10,14 +10,14 @@ layout: default
         <div class="top-level">
 
             <div class="logo-block">
-                <img src="/images/mobi-route-logo.png">
+                <img src="{{ "/images/mobi-route-logo.png" | prepend: site.baseurl }}">
                 <a class="arrow"></a>
             </div>
 
             <ul class="nav nav-tabs">
-                <li role="presentation" class="active"><a href="/"><span class="icon-list-plain"></span> All plans</a></li>
-                <li role="presentation" class=""><a href="/route-summary"><span class="icon-report"></span> Day summary</a></li>
-                <li role="presentation" class=""><a href="/route-map"><span class="icon-map-poi"></span> Map</a></li>
+                <li role="presentation" class="active"><a href="{{ "/" | prepend: site.baseurl }}"><span class="icon-list-plain"></span> All plans</a></li>
+                <li role="presentation" class=""><a href="{{ "/route-summary-empty" | prepend: site.baseurl }}"><span class="icon-report"></span> Day summary</a></li>
+                <li role="presentation" class=""><a href="{{ "/route-map-empty" | prepend: site.baseurl }}"><span class="icon-map-poi"></span> Map</a></li>
             </ul>
 
         </div>
@@ -27,7 +27,7 @@ layout: default
                 <li><a><span class="icon-home"></span> Landing page</a></li>
                 <li class="disabled"><a><span class="icon-app-territory"></span> Territory</a></li>
                 <li class=""><a><span class="icon-app-plan"></span> Plan</a></li>
-                <li class=""><a href="/resource"><span class="icon-app-resource"></span> Resource</a></li>
+                <li class=""><a href="{{ "/resource" | prepend: site.baseurl }}"><span class="icon-app-resource"></span> Resource</a></li>
                 <li class="disabled"><a><span class="icon-app-appointment"></span> Appointment</a></li>
                 <li class=""><a><span class="icon-app-dispatch"></span> Dispatch</a></li>
                 <li class="current"><a><span class="icon-app-route"></span> Route</a></li>
@@ -51,7 +51,7 @@ layout: default
                 </div>
                 <div class="col-xs-6 page-actions">
                     <a id="clear-selected">Clear all <strong>6</strong> selected plans</a>
-                    <a href="/route-create" class="btn btn-green"><span class="icon-plus"></span> Create new plan</a>
+                    <a href="{{ "/route-create" | prepend: site.baseurl }}" class="btn btn-green"><span class="icon-plus"></span> Create new draft plan</a>
                     <button class="btn btn-green"><span class="icon-compare"></span> Compare</button>
                     <button class="btn btn-blue"><span class="icon-refresh"></span> Refresh list</button>
                 </div>
@@ -143,7 +143,7 @@ layout: default
                     <thead>
                         <tr>
                             <th><input type="checkbox"> <a>Sun, Aug 22</a></th>
-                            <th><input type="checkbox"> <a href="/route-summary">Mon, Aug 23</a></th>
+                            <th><input type="checkbox"> <a href="{{ "/route-summary" | prepend: site.baseurl }}">Mon, Aug 23</a></th>
                             <th><input type="checkbox"> <a>Tue, Aug 24</a></th>
                             <th><input type="checkbox"> <a>Wed, Aug 25</a></th>
                             <th><input type="checkbox"> <a>Thu, Aug 26</a></th>

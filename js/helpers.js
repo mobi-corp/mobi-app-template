@@ -83,5 +83,20 @@ $(document).ready(function() {
         masterCheckboxes.attr('checked', false);
     });
 
+/////////// Create new draft plan add profile
+
+    $('.op-3').hide();
+
+    $('.op-2 a').click(function () {
+        $(this).hide();
+        $('.op-2').removeClass('unselected');
+        $('.op-3').show();
+    });
+
+    $('.op-3 a').click(function () {
+        $(this).hide();
+        $('.op-3').removeClass('unselected');
+    })
+
 
 });

@@ -1,0 +1,388 @@
+---
+layout: default
+path: /result
+---
+<div class="app-result">
+
+<!-- HEADER -->
+
+    <header>
+
+        <div class="top-level">
+
+            <div class="logo-block">
+                <a href="{{ "/result" | prepend: site.baseurl }}"><img src="{{ "/images/mobi-result-logo.png" | prepend: site.baseurl }}"></a>
+                <a class="arrow"></a>
+            </div>
+
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="{{ "/" | prepend: site.baseurl }}"><span class="icon-sparkline"></span> Analytics</a></li>
+                <li role="presentation" class=""><a href="{{ "/route-summary-empty" | prepend: site.baseurl }}"><span class="icon-clipboard-check"></span> Driver scorecard</a></li>
+                <li role="presentation" class=""><a href="{{ "/route-map-empty" | prepend: site.baseurl }}"><span class="icon-map-poi"></span> Map</a></li>
+            </ul>
+
+        </div>
+
+        <div id="product-nav">
+            <ul>
+                <li><a><span class="icon-home"></span> Landing page</a></li>
+                <li class="disabled"><a><span class="icon-app-territory"></span> Territory</a></li>
+                <li class=""><a><span class="icon-app-plan"></span> Plan</a></li>
+                <li class=""><a href="{{ "/resource" | prepend: site.baseurl }}"><span class="icon-app-resource"></span> Resource</a></li>
+                <li class="disabled"><a><span class="icon-app-appointment"></span> Appointment</a></li>
+                <li class=""><a><span class="icon-app-dispatch"></span> Dispatch</a></li>
+                <li class=""><a><span class="icon-app-route"></span> Route</a></li>
+                <li class=""><a><span class="icon-app-connect"></span> Connect</a></li>
+                <li class=""><a><span class="icon-app-locate"></span> Locate</a></li>
+                <li class=""><a><span class="icon-app-insight"></span> Insight</a></li>
+                <li class="current"><a href="{{ "/result" | prepend: site.baseurl }}"><span class="icon-app-result"></span> Result</a></li>
+            </ul>
+        </div>
+
+        <div class="bottom-level">
+
+            <div class="row">
+                <div class="col-xs-6 breadcrumbs">
+                    <span class="icon-tree-nav"></span>
+                    <ul>
+                        <li><span><a>Company</a></span></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 page-actions">
+                    <input type="date" value="10/29/16–11/29/16">
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div id="tree-nav">
+        <ul>
+            <li class="open">
+                <a>Company</a>
+                <ul>
+                    <li class="open">
+                        <a>Texas</a>
+                        <ul>
+                            <li class="open end"><a>Austin</a></li>
+                            <li class="closed end"><a>Dallas</a></li>
+                            <li class="closed end"><a>Houston</a></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><a>California</a></li>
+                    <li class="closed"><a>Florida</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+<!-- END HEADER -->
+
+<!-- CONTENT -->
+
+    <section class="main-summary">
+        <div class="row title-row">
+            <div class="col-xs-3 section-title">
+                <h3 role="button" data-toggle="collapse" data-target="#main-summary-collapse" aria-expanded="false" aria-controls="main-summary-collapse">
+                    Company summary
+                </h3>
+            </div>
+            <div class="col-xs-9 section-tabs">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a><span class="icon-grid"></span> Summary</a>
+                    </li>
+                    <li>
+                        <a><span class="icon-revenue"></span> Revenue</a>
+                    </li>
+                    <li>
+                        <a href="{{ "/result-cost" | prepend: site.baseurl }}"><span class="icon-coin"></span> Cost</a>
+                    </li>
+                    <li>
+                        <a><span class="icon-distance"></span> Distance</a>
+                    </li>
+                    <li>
+                        <a><span class="icon-clock"></span> Time</a>
+                    </li>
+                    <li>
+                        <a><span class="icon-poi"></span> Visits</a>
+                    </li>
+                    <li>
+                        <a><span class="icon-person"></span> Drivers</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row content-row collapse in" id="main-summary-collapse">
+            <div class="col-xs-12">
+                <table>
+                    <thead>
+                    <tr>
+                        <th class="metric"></th>
+                        <th class="planned">Planned</th>
+                        <th class="added">Added</th>
+                        <th class="not-done">Not done</th>
+                        <th class="actual">Actual</th>
+                        <th class="variance" colspan="2">Variance</th>
+                        <th class="last-30">Last 30 days</th>
+                        <th class="xtd">MTD</th>
+                        <th class="xtd">QTD</th>
+                        <th class="xtd">YTD</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="metric"><a>Revenue</a></td>
+                        <td class="planned"><a>$4,161,367.00</td>
+                        <td class="added"><a>$2,467,359.50</td>
+                        <td class="not-done"><a>$1,430,203.25</td>
+                        <td class="actual"><a>$3,124,210.75</td>
+                        <td class="variance" colspan="2"><a>($1,037,150.50) (24.9%)</a></td>
+                        <td class="last-30"></td>
+                        <td class="xtd"><a>$2,781,896.00</td>
+                        <td class="xtd"><a>$8,086,437.75</td>
+                        <td class="xtd"><a>$50,627,225.00</td>
+                    </tr>
+                    <tr>
+                        <td class="metric"><a href="{{ "/result-cost" | prepend: site.baseurl }}">Cost</a></td>
+                        <td class="planned"><a href="{{ "/result-cost" | prepend: site.baseurl }}">$236,634.29</td>
+                        <td class="added"><a href="{{ "/result-cost" | prepend: site.baseurl }}">$145,681.79</td>
+                        <td class="not-done"><a href="{{ "/result-cost" | prepend: site.baseurl }}">$168,638.56</td>
+                        <td class="actual"><a href="{{ "/result-cost" | prepend: site.baseurl }}">$259,591.05</td>
+                        <td class="variance" colspan="2"><a href="{{ "/result-cost" | prepend: site.baseurl }}">$22,956.77 9.7%</a></td>
+                        <td class="last-30"></td>
+                        <td class="xtd"><a href="{{ "/result-cost" | prepend: site.baseurl }}">$231,282.58</td>
+                        <td class="xtd"><a href="{{ "/result-cost" | prepend: site.baseurl }}">$670,063.95</td>
+                        <td class="xtd"><a href="{{ "/result-cost" | prepend: site.baseurl }}">$4,130,553.29</td>
+                    </tr>
+                    <tr>
+                        <td class="metric"><a>Distance</a></td>
+                        <td class="planned"><a>73,102</a> mi</td>
+                        <td class="added"><a>56,393</a> mi</td>
+                        <td class="not-done"><a>90,267</a> mi</td>
+                        <td class="actual"><a>106,976</a> mi</td>
+                        <td class="variance" colspan="2"><a>33,874 mi 46.3%</a></td>
+                        <td class="last-30"></td>
+                        <td class="xtd"><a>95,377</a> mi</td>
+                        <td class="xtd"><a>275,153</a> mi</td>
+                        <td class="xtd"><a>1,684,805</a> mi</td>
+                    </tr>
+                    <tr>
+                        <td class="metric"><a>Time</a></td>
+                        <td class="planned"><a>14,000h</a> 10m</td>
+                        <td class="added"><a>8,573h</a> 36m</td>
+                        <td class="not-done"><a>7,812h</a> 25m</td>
+                        <td class="actual"><a>13,240h</a> 59m</td>
+                        <td class="variance" colspan="2"><a>(761h 10m) (5.4%)</a></td>
+                        <td class="last-30"></td>
+                        <td class="xtd"><a>11,794h</a> 16m</td>
+                        <td class="xtd"><a>34,214h</a> 30m</td>
+                        <td class="xtd"><a>211,345h</a> 17m</td>
+                    </tr>
+                    <tr>
+                        <td class="metric"><a>Vists</a></td>
+                        <td class="planned"><a>26,344</a></td>
+                        <td class="added"><a>15,140</a></td>
+                        <td class="not-done"><a>11,600</a></td>
+                        <td class="actual"><a>22,804</a></td>
+                        <td class="variance" colspan="2"><a>(3,540) (13.4%)</a></td>
+                        <td class="last-30"></td>
+                        <td class="xtd"><a>20,300</a></td>
+                        <td class="xtd"><a>59,112</a></td>
+                        <td class="xtd"><a>374,465</a></td>
+                    </tr>
+                    <tr>
+                        <td class="metric"><a>Drivers</a></td>
+                        <td class="planned"><a>58.3</a></td>
+                        <td class="added"><a>35.7</a></td>
+                        <td class="not-done"><a>32.6</a></td>
+                        <td class="actual"><a>55.2</a></td>
+                        <td class="variance" colspan="2"><a>(3.2) (5.4%)</a></td>
+                        <td class="last-30"></td>
+                        <td class="xtd"><a>306.8</a></td>
+                        <td class="xtd"><a>401.7</a></td>
+                        <td class="xtd"><a>550.5</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="per-visit">
+        <div class="row title-row">
+            <div class="col-xs-3 section-title">
+                <h3 role="button" data-toggle="collapse" data-target="#per-visit-collapse" aria-expanded="false" aria-controls="per-visit-collapse">
+                    Metrics per visit
+                </h3>
+            </div>
+            <div class="col-xs-9 section-actions"></div>
+        </div>
+        <div class="row content-row collapse in" id="per-visit-collapse">
+            <div class="col-xs-12">
+                <table>
+                    <thead>
+                    <tr>
+                        <th class="metric"></th>
+                        <th class="planned">Planned</th>
+                        <th class="added">Added</th>
+                        <th class="not-done">Not done</th>
+                        <th class="actual">Actual</th>
+                        <th class="variance" colspan="2">Variance</th>
+                        <th class="last-30">Last 30 days</th>
+                        <th class="xtd">MTD</th>
+                        <th class="xtd">QTD</th>
+                        <th class="xtd">YTD</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="metric">Revenue <p>per visit</p></td>
+                        <td class="planned">$157.96</td>
+                        <td class="added">$162.97</td>
+                        <td class="not-done">$123.29</td>
+                        <td class="actual">$137.00</td>
+                        <td class="variance" colspan="2">($17.25) (10.9%)</td>
+                        <td class="last-30"></td>
+                        <td class="xtd">$0.01</td>
+                        <td class="xtd">$136.80</td>
+                        <td class="xtd">$135.20</td>
+                    </tr>
+                    <tr>
+                        <td class="metric">Cost <p>per visit</p></td>
+                        <td class="planned">$236.63</td>
+                        <td class="added">$148.68</td>
+                        <td class="not-done">$168.63</td>
+                        <td class="actual">$259.59</td>
+                        <td class="variance" colspan="2">$22.96 9.7%</td>
+                        <td class="last-30"></td>
+                        <td class="xtd">$231.28</td>
+                        <td class="xtd">$670.06</td>
+                        <td class="xtd">$4,130.55</td>
+                    </tr>
+                    <tr>
+                        <td class="metric">Distance <p>per visit</p></td>
+                        <td class="planned">73 mi</td>
+                        <td class="added">56 mi</td>
+                        <td class="not-done">90 mi</td>
+                        <td class="actual">107 mi</td>
+                        <td class="variance" colspan="2">34 mi 46.3%</td>
+                        <td class="last-30"></td>
+                        <td class="xtd">95 mi</td>
+                        <td class="xtd">275 mi</td>
+                        <td class="xtd">1,685 mi</td>
+                    </tr>
+                    <tr>
+                        <td class="metric">Travel time <p>per visit</p></td>
+                        <td class="planned">4m</td>
+                        <td class="added">5m</td>
+                        <td class="not-done">19m</td>
+                        <td class="actual">11m</td>
+                        <td class="variance" colspan="2">7m 161.7%</td>
+                        <td class="last-30"></td>
+                        <td class="xtd">0m</td>
+                        <td class="xtd">11m</td>
+                        <td class="xtd">10m</td>
+                    </tr>
+                    <tr>
+                        <td class="metric">Onsite time <p>per visit</p></td>
+                        <td class="planned">27m</td>
+                        <td class="added">28m</td>
+                        <td class="not-done">22m</td>
+                        <td class="actual">24m</td>
+                        <td class="variance" colspan="2">(3m) (10.9%)</td>
+                        <td class="last-30"></td>
+                        <td class="xtd">0m</td>
+                        <td class="xtd">24m</td>
+                        <td class="xtd">24m</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section class="per-driver">
+        <div class="row title-row">
+            <div class="col-xs-3 section-title">
+                <h3 role="button" data-toggle="collapse" data-target="#per-driver-collapse" aria-expanded="false" aria-controls="per-driver-collapse">
+                    Metrics per driver
+                </h3>
+            </div>
+            <div class="col-xs-9 section-actions"></div>
+        </div>
+        <div class="row content-row collapse in" id="per-driver-collapse">
+            <div class="col-xs-12">
+                <table>
+                    <thead>
+                    <tr>
+                        <th class="metric"></th>
+                        <th class="planned">Planned</th>
+                        <th class="added">Added</th>
+                        <th class="not-done">Not done</th>
+                        <th class="actual">Actual</th>
+                        <th class="variance" colspan="2">Variance</th>
+                        <th class="last-30">Last 30 days</th>
+                        <th class="xtd">MTD</th>
+                        <th class="xtd">QTD</th>
+                        <th class="xtd">YTD</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="metric">Revenue <p>per driver</p></td>
+                        <td class="planned">$71,514.99</td>
+                        <td class="added">$70,651.47</td>
+                        <td class="not-done">$44,117.10</td>
+                        <td class="actual">$56,229.25</td>
+                        <td class="variance" colspan="2">($15,283.50) (21.4%)</td>
+                        <td class="last-30"></td>
+                        <td class="xtd">$167.92</td>
+                        <td class="xtd">$20,215.08</td>
+                        <td class="xtd">$92,029.28</td>
+                    </tr>
+                    <tr>
+                        <td class="metric">Cost <p>per driver</p></td>
+                        <td class="planned">$4,052.90</td>
+                        <td class="added">$4,062.65</td>
+                        <td class="not-done">$5,188.98</td>
+                        <td class="actual">$4,724.12</td>
+                        <td class="variance" colspan="2">$671.00 16.6%</td>
+                        <td class="last-30"></td>
+                        <td class="xtd">$18.35</td>
+                        <td class="xtd">$1,677.97</td>
+                        <td class="xtd">$7,510.66</td>
+                    </tr>
+                    <tr>
+                        <td class="metric">Distance <p>per driver</p></td>
+                        <td class="planned">1,222 mi</td>
+                        <td class="added">1,354 mi</td>
+                        <td class="not-done">2,782 mi</td>
+                        <td class="actual">1,974 mi</td>
+                        <td class="variance" colspan="2">752 mi 65.1%</td>
+                        <td class="last-30"></td>
+                        <td class="xtd">10 mi</td>
+                        <td class="xtd">691 mi</td>
+                        <td class="xtd">3,065 mi</td>
+                    </tr>
+                    <tr>
+                        <td class="metric">Visits <p>per driver</p></td>
+                        <td class="planned">453</td>
+                        <td class="added">441</td>
+                        <td class="not-done">352</td>
+                        <td class="actual">408</td>
+                        <td class="variance" colspan="2">(45) (9.9%)</td>
+                        <td class="last-30"></td>
+                        <td class="xtd">1</td>
+                        <td class="xtd">148</td>
+                        <td class="xtd">681</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+<!-- END CONTENT -->
+
+</div>

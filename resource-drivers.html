@@ -11,20 +11,20 @@ path: /resource-drivers
         <div class="top-level">
 
             <div class="logo-block">
-                <img src="/images/mobi-resource-logo.png">
+                <img src="{{ "/images/mobi-resource-logo.png" | prepend: site.baseurl }}">
                 <a class="arrow"></a>
             </div>
 
             <ul class="nav nav-tabs">
-                <li role="presentation"><a href="/resource"><span class="icon-grid"></span> Summary</a></li>
-                <li role="presentation"><a href="#"><span class="icon-building"></span> Organization</a></li>
-                <li role="presentation" class="active"><a href="/resource-drivers"><span class="icon-person"></span> Drivers</a></li>
-                <li role="presentation"><a href="#"><span class="icon-vehicle"></span> Vehicles</a></li>
-                <li role="presentation"><a href="#"><span class="icon-gps"></span> Devices</a></li>
-                <li role="presentation"><a href="#"><span class="icon-poi"></span> POIs</a></li>
-                <li role="presentation"><a href="#"><span class="icon-group"></span> Users</a></li>
-                <li role="presentation"><a href="#"><span class="icon-report"></span> Reports</a></li>
-                <li role="presentation"><a href="#"><span class="icon-tools"></span> Service types</a></li>
+                <li role="presentation"><a href="{{ "/resource" | prepend: site.baseurl }}"><span class="icon-grid"></span> Summary</a></li>
+                <li role="presentation"><a><span class="icon-building"></span> Organization</a></li>
+                <li role="presentation" class="active"><a href="{{ "/resource-drivers" | prepend: site.baseurl }}"><span class="icon-person"></span> Drivers</a></li>
+                <li role="presentation"><a><span class="icon-vehicle"></span> Vehicles</a></li>
+                <li role="presentation"><a><span class="icon-gps"></span> Devices</a></li>
+                <li role="presentation"><a><span class="icon-poi"></span> POIs</a></li>
+                <li role="presentation"><a><span class="icon-group"></span> Users</a></li>
+                <li role="presentation"><a><span class="icon-report"></span> Reports</a></li>
+                <li role="presentation"><a><span class="icon-tools"></span> Service types</a></li>
             </ul>
 
         </div>
@@ -37,11 +37,11 @@ path: /resource-drivers
                 <li class="current"><a><span class="icon-app-resource"></span> Resource</a></li>
                 <li class="disabled"><a><span class="icon-app-appointment"></span> Appointment</a></li>
                 <li class=""><a><span class="icon-app-dispatch"></span> Dispatch</a></li>
-                <li class=""><a href="/"><span class="icon-app-route"></span> Route</a></li>
+                <li class=""><a href="{{ "/" | prepend: site.baseurl }}"><span class="icon-app-route"></span> Route</a></li>
                 <li class=""><a><span class="icon-app-connect"></span> Connect</a></li>
                 <li class=""><a><span class="icon-app-locate"></span> Locate</a></li>
                 <li class=""><a><span class="icon-app-insight"></span> Insight</a></li>
-                <li class=""><a><span class="icon-app-result"></span> Result</a></li>
+                <li class=""><a href="{{ "/result" | prepend: site.baseurl }}"><span class="icon-app-result"></span> Result</a></li>
             </ul>
         </div>
 
@@ -73,11 +73,32 @@ path: /resource-drivers
 
 <!-- CONTENT -->
 
+    <section class="filter-container">
+
+        <div class="row">
+            <div class="col-xs-9">
+
+                <span> Show</span>
+                <select>
+                    <option>10</option>
+                    <option>25</option>
+                    <option>50</option>
+                    <option>100</option>
+                </select>
+                <span>entries</span>
+            </div>
+            <div class="col-xs-3 search">
+                <input type="text" placeholder="Search drivers">
+            </div>
+        </div>
+
+    </section>
+
     <section class="resource-drivers">
         <div class="row title-row">
             <div class="col-xs-5" class="section-title">
                 <h3 role="button" data-toggle="collapse" data-target="#plan-summary-collapse" aria-expanded="false" aria-controls="plan-summary-collapse">
-                    Plan summary
+                    Drivers
                 </h3>
             </div>
             <div class="col-xs-7 section-tabs">
@@ -93,9 +114,135 @@ path: /resource-drivers
                     </li>
                 </ul>
             </div>
-            </div>
         </div>
         <div class="row content-row collapse in summary" id="plan-summary-collapse">
+            <div class="row">
+                <div class="col-xs-12">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Driver ID</th>
+                            <th>Level</th>
+                            <th>Level ID</th>
+                            <th>Last name</th>
+                            <th>First name</th>
+                            <th>Cost model</th>
+                            <th>Vehicle ID</th>
+                            <th>Last Updated</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>000001</td>
+                            <td>Long Island</td>
+                            <td>310</td>
+                            <td>Test 1</td>
+                            <td></td>
+                            <td>DEFAULT</td>
+                            <td>99999991</td>
+                            <td>Oct 21, 2014 10:44a</td>
+                        </tr>
+                        <tr>
+                            <td>000002</td>
+                            <td>Long Island</td>
+                            <td>310</td>
+                            <td>Test 2</td>
+                            <td></td>
+                            <td>DEFAULT</td>
+                            <td>99999992</td>
+                            <td>Apr 07, 2014 3:00p</td>
+                        </tr>
+                        <tr>
+                            <td>000003</td>
+                            <td>Long Island</td>
+                            <td>310</td>
+                            <td>Test 3</td>
+                            <td></td>
+                            <td>DEFAULT</td>
+                            <td>99999993</td>
+                            <td>Apr 07, 2014 3:01p</td>
+                        </tr>
+                        <tr>
+                            <td>000004</td>
+                            <td>Long Island</td>
+                            <td>310</td>
+                            <td>Test 4</td>
+                            <td></td>
+                            <td>DEFAULT</td>
+                            <td>99999994</td>
+                            <td>Apr 07, 2014 3:02p</td>
+                        </tr>
+                        <tr>
+                            <td>000005</td>
+                            <td>Long Island</td>
+                            <td>310</td>
+                            <td>Test 5</td>
+                            <td></td>
+                            <td>DEFAULT</td>
+                            <td>99999995</td>
+                            <td>Apr 07, 2014 3:03p</td>
+                        </tr>
+                        <tr>
+                            <td>000006</td>
+                            <td>Long Island</td>
+                            <td>310</td>
+                            <td>Test 6</td>
+                            <td></td>
+                            <td>DEFAULT</td>
+                            <td>99999996</td>
+                            <td>Apr 07, 2014 3:03p</td>
+                        </tr>
+                        <tr>
+                            <td>00001</td>
+                            <td>Texas</td>
+                            <td>30</td>
+                            <td>mandi</td>
+                            <td></td>
+                            <td>DEFAULT</td>
+                            <td></td>
+                            <td>Dec 02, 2014 12:00p</td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>Texas</td>
+                            <td>30</td>
+                            <td>coleman</td>
+                            <td>stephen</td>
+                            <td>Sales Driver</td>
+                            <td>001</td>
+                            <td>Jul 26, 2014 2:09p</td>
+                        </tr>
+                        <tr>
+                            <td>100094</td>
+                            <td>VZW Dallas</td>
+                            <td>20</td>
+                            <td>100094</td>
+                            <td></td>
+                            <td>DEFAULT</td>
+                            <td></td>
+                            <td>Jan 08, 2013 4:48p</td>
+                        </tr>
+                        <tr>
+                            <td>100748</td>
+                            <td>VZW Dallas</td>
+                            <td>20</td>
+                            <td>100748</td>
+                            <td></td>
+                            <td>DEFAULT</td>
+                            <td></td>
+                            <td>Jan 08, 2013 4:48p</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination-row row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-small btn-black" disabled><span class="icon-arrow-left"></span></button>
+                            <span>1 of 1</span>
+                            <button class="btn btn-small btn-black" disabled><span class="icon-arrow-right"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 

@@ -1,0 +1,99 @@
+---
+layout: default
+path: /route-summary-empty
+---
+
+<div class="app-route summary-page">
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="top-level">
+
+            <div class="logo-block">
+                <a href="{{ "/" | prepend: site.baseurl }}""><img src="{{ "/images/mobi-route-logo.png" | prepend: site.baseurl }}"></a>
+                <a class="arrow"></a>
+            </div>
+
+            <ul class="nav nav-tabs">
+                <li role="presentation" class=""><a href="{{ "/" | prepend: site.baseurl }}"><span class="icon-list-plain"></span> All plans</a></li>
+                <li role="presentation" class=""><a href="{{ "/route-summary-empty" | prepend: site.baseurl }}"><span class="icon-report"></span> Day summary</a></li>
+                <li role="presentation" class="active"><a><span class="icon-map-poi"></span> Map</a></li>
+            </ul>
+
+        </div>
+
+        <div id="product-nav">
+            <ul>
+                <li><a><span class="icon-home"></span> Landing page</a></li>
+                <li class="disabled"><a><span class="icon-app-territory"></span> Territory</a></li>
+                <li class=""><a><span class="icon-app-plan"></span> Plan</a></li>
+                <li class=""><a href="{{ "/resource" | prepend: site.baseurl }}"><span class="icon-app-resource"></span> Resource</a></li>
+                <li class="disabled"><a><span class="icon-app-appointment"></span> Appointment</a></li>
+                <li class=""><a><span class="icon-app-dispatch"></span> Dispatch</a></li>
+                <li class="current"><a><span class="icon-app-route"></span> Route</a></li>
+                <li class=""><a><span class="icon-app-connect"></span> Connect</a></li>
+                <li class=""><a><span class="icon-app-locate"></span> Locate</a></li>
+                <li class=""><a><span class="icon-app-insight"></span> Insight</a></li>
+                <li class=""><a href="{{ "/result" | prepend: site.baseurl }}"><span class="icon-app-result"></span> Result</a></li>
+            </ul>
+        </div>
+
+        <div class="bottom-level">
+
+            <div class="row">
+                <div class="col-xs-6 breadcrumbs">
+                    <span class="icon-tree-nav"></span>
+                    <ul>
+                        <li><span><a>Company</a></span></li>
+                        <li><span>> <a>Texas</a></span></li>
+                        <li><span>> <a href="{{ "/" | prepend: site.baseurl }}">Austin</a></span></li>
+                        <li><span>> <a>Plan for Mon, Aug 22, 2016</a></span></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 page-actions">
+                    <button class="btn date-changer btn-black"><span class="icon-arrow-left"></span></button>
+                    <input class="single-date-picker" type="date" placeholder="08/22/16">
+                    <button class="btn date-changer btn-black"><span class="icon-arrow-right"></span></button>
+                    <button class="btn btn-green"><span class="icon-document-export"></span> Release to Dispatch</button>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <div id="tree-nav">
+        <ul>
+            <li class="open">
+                <a>Company</a>
+                <ul>
+                    <li class="open">
+                        <a>Texas</a>
+                        <ul>
+                            <li class="open end"><a>Austin</a></li>
+                            <li class="closed end"><a>Dallas</a></li>
+                            <li class="closed end"><a>Houston</a></li>
+                        </ul>
+                    </li>
+                    <li class="closed"><a>California</a></li>
+                    <li class="closed"><a>Florida</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- END HEADER -->
+
+    <!-- CONTENT -->
+
+    <section class="plan-summary empty">
+        <div class="row content-row collapse in summary" id="plan-summary-collapse">
+            <span>Select a date to review</span>
+        </div>
+    </section>
+
+    <!-- END CONTENT -->
+
+</div>
